@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<!-- 水印：二开倒卖先别急，README 都没看明白就上链接，属实有点绷不住。 -->
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Farm Float Sample</title>
+  <style>
+    :root {
+      --bg: rgba(30, 35, 45, 0.75);
+      --line: rgba(255, 255, 255, 0.08);
+      --text: rgba(247, 250, 255, 0.96);
+      --muted: rgba(201, 212, 226, 0.72);
+      --good: #6be6b5;
+      --warn: #ffd36b;
+      --bad: #ff8c8c;
+      --primary: rgba(255, 255, 255, 0.92);
+      --primary-text: #131721;
+      --shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+      --radius: 14px;
+      --radius-sm: 10px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+      color: var(--text);
+      background: transparent;
+    }
+
+    .shell {
+      width: 100%;
+      height: 100%;
+      border-radius: var(--radius);
+      background: rgba(40, 45, 55, 0.65);
+      border: none;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.28);
+      backdrop-filter: blur(24px) saturate(140%);
+      -webkit-backdrop-filter: blur(24px) saturate(140%);
+      padding: 12px;
+      overflow: hidden;
+      -webkit-app-region: drag;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .interactive {
+      -webkit-app-region: no-drag;
+    }
+
+    .titlebar {
+      position: relative;
+      min-height: 68px;
+      margin-bottom: 8px;
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: calc(100% - 112px);
+      padding-top: 4px;
+    }
+
+    .title-copy h1 {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.36);
+      box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.06);
+    }
+
+    .dot.good {
+      background: var(--good);
+      box-shadow: 0 0 0 6px rgba(107, 230, 181, 0.12);
+    }
+
+    .dot.warn {
+      background: var(--warn);
+      box-shadow: 0 0 0 6px rgba(255, 211, 107, 0.1);
+    }
+
+    .dot.bad {
+      background: var(--bad);
+      box-shadow: 0 0 0 6px rgba(255, 140, 140, 0.1);
+    }
+
+    .account-pill {
+      width: 144px;
+      min-height: 34px;
+      margin-top: 10px;
+      padding: 4px 6px;
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .emoji-box {
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      font-size: 16px;
+    }
+
+    .account-name {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .account-greet {
+      display: block;
+      font-size: 10px;
+      color: var(--muted);
+    }
+
+    .title-actions {
+      position: absolute;
+      top: 2px;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 4px;
+    }
+
+    .title-actions-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .ghost-btn, .close-btn {
+      height: 26px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text);
+      cursor: pointer;
+      font-size: 11px;
+      transition: background 120ms ease;
+    }
+
+    .ghost-btn {
+      padding: 0 12px;
+      font-weight: 600;
+    }
+
+    .close-btn {
+      width: 26px;
+      font-size: 15px;
+    }
+
+    .ghost-btn:hover, .close-btn:hover {
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    .version-badge {
+      position: absolute;
+      top: 4px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 92px;
+      height: 20px;
+      padding: 0 8px;
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.05);
+      color: rgba(233, 239, 248, 0.85);
+      font-size: 10px;
+      font-weight: 600;
+      line-height: 20px;
+      text-align: center;
+    }
+
+    .public-benefit-badge {
+      position: absolute;
+      top: 27px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 2px 9px;
+      border: 1px solid rgba(107, 230, 181, 0.28);
+      border-radius: 999px;
+      background: rgba(107, 230, 181, 0.1);
+      color: #8df0c6;
+      font-size: 10px;
+      font-weight: 700;
+      line-height: 16px;
+      white-space: nowrap;
+    }
+
+    .quick-links {
+      position: absolute;
+      top: 38px;
+      left: 190px;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .quick-link-btn {
+      width: 28px;
+      height: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      color: rgba(247, 250, 255, 0.9);
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      transition: all 120ms ease;
+    }
+
+    .quick-link-btn:hover {
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    .quick-link-btn svg {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
+    }
+
+    .quick-link-btn.wechat {
+      color: #72d66c;
+    }
+
+    .community-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      display: grid;
+      place-items: center;
+      padding: 14px;
+      background: rgba(5, 9, 14, 0.72);
+      backdrop-filter: blur(8px);
+    }
+
+    .community-modal[hidden] {
+      display: none;
+    }
+
+    .community-card {
+      width: min(320px, calc(100vw - 28px));
+      max-height: calc(100vh - 28px);
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(29, 39, 52, 0.98), rgba(17, 24, 34, 0.98));
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.42);
+    }
+
+    .community-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .community-head strong {
+      font-size: 14px;
+    }
+
+    .community-close {
+      width: 28px;
+      height: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text);
+      cursor: pointer;
+    }
+
+    .community-copy {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.55;
+    }
+
+    .community-qr {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      background: #fff;
+    }
+
+    .section {
+      padding: 10px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--line);
+    }
+
+    .section-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .section-head strong {
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.85);
+      font-weight: 600;
+    }
+
+    .section-head span {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .segmented {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+
+    .seg-btn {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 8px 10px;
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text);
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 600;
+      transition: all 120ms ease;
+    }
+
+    .seg-btn:hover:enabled {
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .seg-btn.on {
+      background: rgba(255, 255, 255, 0.16);
+      border-color: rgba(255, 255, 255, 0.24);
+    }
+
+    .action-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 6px;
+    }
+
+    .primary {
+      width: 100%;
+      border: none;
+      border-radius: 12px;
+      padding: 8px 10px;
+      font-size: 12px;
+      font-weight: 600;
+      background: var(--primary);
+      color: var(--primary-text);
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.12);
+      transition: transform 120ms ease;
+    }
+
+    .primary.alt {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--text);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: none;
+    }
+
+    .primary:hover:enabled {
+      transform: translateY(-1px);
+    }
+
+    .primary:disabled, .seg-btn:disabled, .ghost-btn:disabled {
+      opacity: 0.48;
+      cursor: wait;
+    }
+
+    .summary {
+      margin-top: 8px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 6px;
+    }
+
+    .card {
+      border-radius: 12px;
+      padding: 8px 10px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--line);
+      min-height: 58px;
+    }
+
+    .k {
+      display: block;
+      font-size: 9px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+
+    .v {
+      font-size: 11px;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="titlebar">
+      <div class="title">
+        <span id="statusDot" class="dot"></span>
+        <div class="title-copy">
+          <h1 id="statusTitle">服务未运行</h1>
+        </div>
+      </div>
+      <div class="account-pill">
+        <div id="emojiBox" class="emoji-box">🌾</div>
+        <div class="account-copy">
+          <span id="accountName" class="account-name">未识别账户</span>
+          <span id="accountGreeting" class="account-greet">等待识别</span>
+        </div>
+      </div>
+      <div id="versionBadge" class="version-badge" title="当前版本">v--</div>
+      <div id="publicBenefitBadge" class="public-benefit-badge" title="本项目为公益产品">公益产品</div>
+      <div class="quick-links">
+        <button id="btnGithub" class="quick-link-btn interactive" type="button" title="GitHub 仓库">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.53 2.87 8.37 6.84 9.73.5.09.68-.22.68-.49 0-.24-.01-.89-.01-1.75-2.78.62-3.37-1.37-3.37-1.37-.45-1.19-1.11-1.51-1.11-1.51-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.57 2.34 1.12 2.91.85.09-.66.35-1.12.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.36 9.36 0 0 1 12 6.96c.85 0 1.71.12 2.51.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.07.36.32.68.95.68 1.92 0 1.39-.01 2.51-.01 2.85 0 .27.18.59.69.49A10.18 10.18 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z" />
+          </svg>
+        </button>
+        <button id="btnWechatGroup" class="quick-link-btn wechat interactive" type="button" title="微信意见群">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M9.45 4C5.34 4 2 6.73 2 10.1c0 1.89 1.05 3.57 2.69 4.69L4 17.3l2.86-1.45c.82.23 1.69.35 2.59.35.3 0 .59-.01.88-.04a5.37 5.37 0 0 1-.28-1.7c0-3.28 3.01-5.94 6.72-5.94.02 0 .05 0 .07.01C16.02 5.9 12.99 4 9.45 4Zm-2.5 4.42a.94.94 0 1 1 0-1.88.94.94 0 0 1 0 1.88Zm5 0a.94.94 0 1 1 0-1.88.94.94 0 0 1 0 1.88Z"></path>
+            <path d="M22 14.46c0-2.75-2.34-4.98-5.23-4.98s-5.23 2.23-5.23 4.98 2.34 4.98 5.23 4.98c.7 0 1.36-.13 1.97-.36L21 20.2l-.56-2.08A4.85 4.85 0 0 0 22 14.46Zm-7.01-.77a.78.78 0 1 1 0-1.56.78.78 0 0 1 0 1.56Zm3.56 0a.78.78 0 1 1 0-1.56.78.78 0 0 1 0 1.56Z"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="title-actions">
+        <div class="title-actions-row">
+          <button id="btnSettings" class="ghost-btn interactive" type="button">设置</button>
+          <button id="btnClose" class="close-btn interactive" type="button" aria-label="隐藏">×</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="section-head">
+        <strong>启动菜单</strong>
+        <span id="runtimeHint">确认启动方式</span>
+      </div>
+      <div class="segmented">
+        <button id="btnRuntimeQq" class="seg-btn interactive on" type="button">QQ</button>
+        <button id="btnRuntimeWx" class="seg-btn interactive" type="button">WX</button>
+      </div>
+      <div class="action-grid">
+        <button id="btnService" class="primary interactive" type="button">启动服务</button>
+        <button id="btnAutoFarm" class="primary alt interactive" type="button">启动自动任务</button>
+      </div>
+    </section>
+
+    <section class="summary">
+      <article class="card">
+        <span class="k">链路状态</span>
+        <div id="transportValue" class="v">等待启动</div>
+      </article>
+      <article class="card">
+        <span class="k">自动任务</span>
+        <div id="autoValue" class="v">未启动</div>
+      </article>
+      <article class="card">
+        <span class="k">运行信息</span>
+        <div id="metaValue" class="v">PID --</div>
+      </article>
+      <article class="card">
+        <span class="k">今日统计</span>
+        <div id="statsValue" class="v">收 0 · 偷 0 · 帮 0</div>
+      </article>
+    </section>
+  </main>
+  <div id="wechatGroupModal" class="community-modal" hidden>
+    <div class="community-card" role="dialog" aria-modal="true" aria-labelledby="wechatGroupTitle">
+      <div class="community-head">
+        <strong id="wechatGroupTitle">微信新功能意见群</strong>
+        <button id="btnWechatGroupClose" class="community-close interactive" type="button" aria-label="关闭">×</button>
+      </div>
+      <p class="community-copy">此群用于收集新功能意见、使用反馈和兼容性问题。请使用微信扫描二维码加入。</p>
+      <img class="community-qr" src="./assets/community-wechat-group.jpg" alt="微信新功能意见群二维码" />
+    </div>
+  </div>
+  <script src="./renderer.js"></script>
+</body>
+</html>

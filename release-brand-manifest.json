@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "product": "QQ Farm CDP Manager",
+  "version": "1.8.3-bernadette.9",
+  "publicBenefitLabel": "公益产品",
+  "notForResale": true,
+  "builtAt": "2026-06-11T12:14:39.483Z",
+  "obfuscatedFileCount": 40,
+  "files": {
+    "LICENSE": "9796037d1c270bcbac30b3f3e2e8f648da2e810c767cb04b0e3dcfc9a8a6368b",
+    "src/product-brand.js": "48df9d45052e74fa57ed58622acffa8fa1718e23c82c4a8d7e8b05653f8b4ed0",
+    "src/gateway.js": "8b1c75daa736462af35aee2f4fd45287695ebd402ace36ae14c8b009de51ba4d",
+    "desktop-sample/main.js": "21a7cfe30ff818884571b3e339f71dbfb67966f46f5154e0aee5ad04c13b0469",
+    "desktop-sample/renderer.js": "e558fc1daa9f8f004e228f71fa6879764c80c65e9515554f8fd17626f93e30c4",
+    "desktop-sample/index.html": "ffae51ade95c79ed8a3c016a88edf11120ccaf791c3a9691b027b70e2d8c067a",
+    "public/index.html": "b049b65f38ba0a36784a4e8e8e642c9212cc160a7fe240cd8f5663c71ba76771"
+  }
+}
