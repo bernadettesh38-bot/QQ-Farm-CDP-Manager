@@ -1,8 +1,8 @@
 {
   "product": "QQ-Farm-CDP-Manager",
   "artifactType": "protected",
-  "version": "1.8.4",
-  "buildId": "PUBLIC-20260612-001",
-  "sourceCommit": "2ff0939aea81e37114a98d28540cbffd5493aa6b",
-  "createdAt": "2026-06-12T06:33:31.659Z"
+  "version": "1.8.5",
+  "buildId": "PUBLIC-20260612-004",
+  "sourceCommit": "16b00c354015cf7e179b841cfd3b9c920605409e",
+  "createdAt": "2026-06-12T08:20:35.108Z"
 }
