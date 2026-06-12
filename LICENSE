@@ -1,0 +1,130 @@
+QQ FARM PUBLIC BENEFIT LICENSE 1.0
+QQ 农场公益产品许可证 1.0
+
+Copyright (c) 2026 bernadettesh38-bot. All rights reserved except as
+expressly granted by this License.
+
+1. Purpose
+
+This software is published as a public-benefit product for personal learning,
+research, technical exchange, and free community sharing. It is not published
+for resale.
+
+本软件以公益产品形式发布，仅供个人学习、研究、技术交流和社区免费分享，不以
+收费转售为发布目的。
+
+2. Permissions
+
+Subject to all terms of this License, you may:
+
+a. use the software personally for learning, research, and non-commercial use;
+b. inspect and modify the source code for those purposes;
+c. redistribute the software, with or without modifications, free of charge;
+d. publish technical articles or non-commercial demonstrations based on it.
+
+在遵守本许可证全部条款的前提下，你可以将本软件用于个人学习、研究和非商业
+用途，可以查看、修改源码，也可以免费分享原版或修改版。
+
+3. Public-Benefit Notice
+
+Every copy, modified version, user interface, desktop shell, Web interface,
+binary package, and redistributed work must continuously and conspicuously
+display the Chinese notice "公益产品". The notice must be readable during
+ordinary use and must not be hidden, weakened, covered, renamed, disabled, or
+made removable through configuration.
+
+所有副本、修改版、用户界面、桌面壳、Web 页面、二进制包及再发布作品，均须在
+正常使用过程中持续、清晰地显示“公益产品”。不得隐藏、弱化、遮挡、改名、关闭，
+也不得通过配置提供移除该标识的能力。
+
+4. Prohibited Conduct
+
+You may not, directly or indirectly:
+
+a. sell the software or charge for downloading, copying, activation, access,
+   licensing, membership, updates, or redistribution;
+b. list or distribute it through Xianyu, Taobao, Pinduoduo, paid groups, paid
+   cloud drives, marketplaces, or similar channels in exchange for money or
+   other consideration;
+c. bundle it with another product or service in a way that makes access to this
+   software part of a paid transaction;
+d. charge for installation, deployment, configuration, operation, maintenance,
+   modification, support, or training where this software is the principal
+   subject of the service;
+e. remove or bypass the public-benefit notice, attribution, license, integrity
+   checks, repository link, or anti-resale warning;
+f. claim to be the original author, an official release, or an authorized
+   commercial distributor;
+g. use the software to provide a commercial hosted service or other
+   revenue-generating offering.
+
+禁止直接或间接实施以下行为：
+
+a. 销售本软件，或就下载、复制、激活、访问、授权、会员、更新、再发布收费；
+b. 在闲鱼、淘宝、拼多多、付费群、付费网盘、交易平台等渠道有偿提供本软件；
+c. 将本软件捆绑到付费商品或服务中，以付费作为获得本软件的条件；
+d. 以本软件为主要服务对象，收取安装、部署、配置、代挂、维护、修改、支持或
+   培训费用；
+e. 删除或绕过公益标识、署名、许可证、完整性校验、仓库链接或反倒卖提示；
+f. 冒充原作者、官方版本或获得授权的商业分发者；
+g. 使用本软件提供收费托管服务或其他营利性服务。
+
+5. Redistribution Requirements
+
+Redistributions must include this complete License, retain all copyright and
+attribution notices, clearly identify modifications, provide source code for
+the redistributed version, and include a visible link to:
+
+https://github.com/bernadettesh38-bot/QQ-Farm-CDP-Manager
+
+Redistribution must be genuinely free of charge and may not require payment,
+purchase, donation, membership, following an account, or joining a paid group.
+
+再发布必须附带本许可证全文，保留版权与署名，明确标注修改内容，提供对应版本
+源码，并清晰展示上述原始仓库链接。免费分享不得以付款、购买、赞助、会员、关注
+账号或加入付费群为条件。
+
+6. Separate Commercial Permission
+
+Any commercial use, paid service, or removal or alteration of the required
+notice requires prior written permission from the copyright holder. No
+permission is implied by silence, prior availability, or possession of a copy.
+
+任何商业使用、收费服务，或移除、改变规定标识的行为，均须事先取得版权所有者
+的书面授权。未回复、曾经公开提供或持有副本均不构成授权。
+
+7. Termination
+
+Your rights under this License terminate automatically upon violation. After
+termination, you must stop use and distribution and remove all infringing
+copies and listings. The copyright holder may provide written reinstatement
+after the violation has been fully cured.
+
+违反本许可证时，授权自动终止。你必须立即停止使用和传播，并删除侵权副本与
+商品链接。完成纠正后，版权所有者可以书面恢复授权。
+
+8. Prior Releases
+
+This License applies to versions first released under it. It does not revoke
+rights already granted for earlier versions under a different license.
+
+本许可证仅适用于首次以本许可证发布的版本，不追溯撤销旧版本已经依据其他
+许可证授予的权利。
+
+9. No Affiliation
+
+This is an independent learning and research project. It is not affiliated
+with, endorsed by, or an official product of Tencent or the game operator.
+
+本项目是独立的学习研究项目，与腾讯及游戏运营方无隶属、授权或官方关系。
+
+10. Disclaimer
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND. TO THE MAXIMUM
+EXTENT PERMITTED BY LAW, THE COPYRIGHT HOLDER SHALL NOT BE LIABLE FOR ANY CLAIM,
+DAMAGE, ACCOUNT LOSS, DATA LOSS, SERVICE INTERRUPTION, OR OTHER LIABILITY
+ARISING FROM THE SOFTWARE OR ITS USE.
+
+本软件按“现状”提供，不作任何明示或默示保证。在法律允许的最大范围内，版权
+所有者不对因本软件或其使用产生的索赔、损失、账号损失、数据损失或服务中断
+承担责任。
