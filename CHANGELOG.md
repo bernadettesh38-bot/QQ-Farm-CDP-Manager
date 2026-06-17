@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-06-17 - 1.9.5
+
+- Added a shared friend-help executor that detects the new One-Click Farming entry before falling back to legacy water, weed, and pest help actions.
+- Extended friend patrol, steal-follow help, normal help, and guard-dog reward help to use the same help executor and detailed friend-help logs.
+- Changed QQ startup to limited launch/reload attempts with degraded waiting and desktop diagnostic log export on final failure or PowerShell timeout.
+- Fixed backpack-first planting so an empty backpack falls back to the highest-level available shop seed and continues planting after purchase.
+- Added purple land recognition to runtime land detection, dashboard display, and auto-fertilizer land-type filtering.
+
 ## 2026-06-17 - 1.9.4
 
 - Replaced the public README, changelog, and GitHub release notes with clean English text to remove corrupted Chinese text from the public repository.
