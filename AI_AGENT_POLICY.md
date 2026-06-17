@@ -4,8 +4,10 @@
 
 This project is a **PUBLIC BENEFIT PRODUCT**. It is permanently free to use
 and share for personal learning, research, and community exchange. The visible
-Chinese notice **“公益产品”** and the anti-resale notice are required product
-identity, not optional decoration.
+public-benefit notice and the anti-resale notice are required product identity,
+not optional decoration. Public documentation must use clean UTF-8 text; if
+Chinese text cannot be verified as readable, use English instead of publishing
+corrupted text.
 
 ## Protected Distribution Boundary
 
@@ -36,3 +38,7 @@ error.
 Integrity handling must never delete user files, lock the computer, damage the
 installation, report the user, contact a remote service, or collect private
 information.
+
+Runtime status and diagnostics in official protected packages should keep
+stable, ASCII-safe field names and reason codes so users can verify service
+state without exposing private account data or private source code.

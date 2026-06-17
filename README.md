@@ -8,6 +8,9 @@ Current version: `v1.9.6`
 
 ## What Is New
 
+- Release candidate `v1.9.6-PUBLIC-20260618-003` is the protected package selected for final pre-release verification.
+- Protected desktop status now keeps layered readiness fields separate so a live local process is not reported as stopped just because one health probe is slow.
+- Desktop diagnostics now write JSONL traces for protected status, QQ runtime, scheduler decisions, own-farm work, friend stealing, normal help, and guard-dog help.
 - Fixed QQ one-click farming for the updated tool layout where weed and pest work share a visible work button instead of the old fixed indexes.
 - Own-farm work now retries and verifies real progress before reporting success.
 - Friend help now keeps One-Click Farming first and uses water, weed, and pest legacy actions as a fallback across normal, steal-follow, and guard-dog flows.
@@ -21,6 +24,7 @@ Current version: `v1.9.6`
 - Runtime support for QQ/Lite and WeChat/CDP modes.
 - Desktop shell, web dashboard, local logs, and runtime health checks.
 - Protected public release package with signed manifest, public verification files, and tamper checks.
+- ASCII-safe reason codes for protected runtime diagnostics and release verification.
 
 ## How To Use
 

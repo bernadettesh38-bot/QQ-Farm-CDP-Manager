@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-06-18 - 1.9.6-PUBLIC-20260618-003
+
+- Prepared the final v1.9.6 protected release candidate from build `PUBLIC-20260618-003`; older build ids `20260617-007`, `20260618-001`, and `20260618-002` must not be published for this release.
+- Fixed protected desktop status flapping by preserving process-aware health state: `processAlive`, `httpReady`, `gatewayReady`, `schedulerReady`, and `runtimeReady` are reported separately, with a 5000 ms health timeout and short stale-health grace.
+- Added desktop JSONL diagnostics for protected status, QQ runtime, scheduler, own-farm work, friend stealing, normal help, and guard-dog help so first-action and no-op reasons can be verified after packaging.
+- Kept the signed protected package checks as release blockers: manifest verification, whitelist checks, sensitive-data scan, source-leak scan, tamper tests, protected runtime size checks, and clean UTF-8 documentation scan.
+- Verified the protected QQ runtime reached `qq_ws_connected`, `qq_runtime_context_ready`, and `runtime_synced`; own-farm work and friend-help flows record real-action or explicit no-op reason codes.
+
 ## 2026-06-17 - 1.9.6
 
 - Fixed the updated QQ one-click work tool layout: weed and pest work now fall back to the active visible work button when the old fixed indexes are not present.
