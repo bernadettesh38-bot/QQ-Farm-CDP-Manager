@@ -4,15 +4,15 @@ QQ Farm CDP Manager is a protected desktop and web control tool for personal stu
 
 This project is permanently free for public-benefit use. Reselling paid copies or paid repackaged versions is not allowed.
 
-Current version: `v1.9.5`
+Current version: `v1.9.6`
 
 ## What Is New
 
-- Added a unified friend-help executor that tries the new One-Click Farming entry first and falls back to legacy water, weed, and pest actions.
-- Friend patrol now checks for One-Click Farming prompts after entering a friend farm, including steal-follow and guard-dog reward flows.
-- QQ startup now uses limited launch/reload attempts, degraded waiting, and desktop diagnostic logs instead of aggressive small-window relaunch loops.
-- Backpack-first planting now falls back to buying the highest-level available shop seed when the backpack has no usable seed.
-- Purple land is recognized by the runtime, dashboard, and auto-fertilizer land-type filter.
+- Fixed QQ one-click farming for the updated tool layout where weed and pest work share a visible work button instead of the old fixed indexes.
+- Own-farm work now retries and verifies real progress before reporting success.
+- Friend help now keeps One-Click Farming first and uses water, weed, and pest legacy actions as a fallback across normal, steal-follow, and guard-dog flows.
+- QQ WebSocket reconnect grace now avoids repeated host reloads during short disconnect, just-ready, and reconnecting states.
+- Friend steal now follows one-click harvest with four-tile targeted fallback when the runtime detects four-tile crops.
 
 ## Main Features
 

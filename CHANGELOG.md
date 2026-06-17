@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-06-17 - 1.9.6
+
+- Fixed the updated QQ one-click work tool layout: weed and pest work now fall back to the active visible work button when the old fixed indexes are not present.
+- Own-farm work now verifies real count reduction and no longer reports a protected runtime task as successful when weed or pest counts do not change.
+- Friend help now retries One-Click Farming first and then runs all legacy help actions, covering watering, weed removal, and pest removal in normal, steal-follow, and guard-dog help flows.
+- Added QQ WebSocket grace handling so bootstrap and process guard do not treat short reconnecting, just-disconnected, or just-ready states as immediate host failures.
+- Added four-tile crop follow-up stealing after one-click harvest, even when the summary collect count already reached zero.
+- Added regression coverage for protected lite one-click work fallback, own-farm full work execution, QQ WebSocket reconnect grace, friend-help legacy coverage, and four-tile post-one-click stealing.
+
 ## 2026-06-17 - 1.9.5
 
 - Added a shared friend-help executor that detects the new One-Click Farming entry before falling back to legacy water, weed, and pest help actions.
