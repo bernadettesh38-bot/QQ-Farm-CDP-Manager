@@ -1,23 +1,45 @@
-﻿# QQ Farm CDP Manager - Bernadette Edition
+# QQ Farm CDP Manager - Bernadette Edition
 
-QQ 缁忓吀鍐滃満鑷姩鍖栬緟鍔╁伐鍏凤紝闈㈠悜涓汉瀛︿範銆佺爺绌跺拰鍏泭鍒嗕韩浣跨敤銆?
-**鍏泭浜у搧锛屾案涔呭厤璐瑰垎浜紝绂佹鍊掑崠銆?*
+QQ Farm CDP Manager is a protected desktop and web control tool for personal study, research, and public-benefit sharing.
 
-褰撳墠鐗堟湰锛歚1.9.3`
+This project is permanently free for public-benefit use. Reselling paid copies or paid repackaged versions is not allowed.
 
-## 鏈増鏇存柊
+Current version: `v1.9.4`
 
-- 妗岄潰澹冲鍔犵嫭绔嬫渶灏忓寲鎸夐挳锛屽彲浠ュ湪涓嶉€€鍑烘湇鍔＄殑鎯呭喌涓嬫敹璧峰埌鍚庡彴銆?- 鎶や富鐘鍔遍€氶亾鍦ㄨ繘鍏ュソ鍙嬪啘鍦哄悗澧炲姞鐘舵€佸埛鏂扮瓑寰呬笌澶氭澶嶆煡锛屽噺灏戝伓鍙戝埌杈惧悗鏃犲姩浣滃氨杩斿洖銆?- 鑷姩璋冨害缁撴灉澧炲姞鏇存槑纭殑鍙墽琛岀姸鎬佷笌澶辫触鍘熷洜锛屽府鍔╁垎杈ㄦ槸鐪熸棤鍔ㄤ綔杩樻槸鐘舵€佹湭鍒锋柊銆?- 淇濇寔鍏紑璇存槑绠€娲侊紝涓嶅叕寮€濂藉弸缂栧彿銆佹祴璇曟牱鏈紪鍙锋垨鍐呴儴璇嗗埆鏁板瓧銆?
-## 涓昏鍔熻兘
+## What Is New
 
-- 鑷姩绉嶆銆佹敹鑾枫€侀摬闄ゃ€佽ˉ绉嶅拰浠撳簱璇诲彇銆?- 濂藉弸鍐滃満宸℃煡銆佸伔鑿溿€佸府鍔╁拰鐗规畩浣滅墿鍏滃簳銆?- QQ/Lite 涓庡井淇?CDP 鍙岄摼璺敮鎸併€?- 妗岄潰澹炽€乄eb 鎺у埗鍙板拰鏈湴杩愯鏃ュ織銆?- 鍙椾繚鎶ゅ彂甯冨寘瀹屾暣鎬ф牎楠屻€佸叕鐩婂０鏄庡拰鍏紑楠岃瘉鏂囦欢銆?
-## 浣跨敤璇存槑
+- Replaced the public README, changelog, and GitHub release notes with clean English text so the public repository no longer shows corrupted Chinese text.
+- Added a desktop shell minimize button. The shell can now be hidden to the background without stopping the running service.
+- Improved the guard-dog reward path by waiting and probing again after entering a friend's farm, reducing cases where the app arrives and immediately returns without action.
+- Added clearer scheduler result reasons so action availability, empty queues, cooldowns, and real action progress are easier to distinguish.
 
-1. 瑙ｅ帇鍙戝竷鍖呭埌鑻辨枃鎴栫煭璺緞鐩綍銆?2. 杩愯 `Windows_start.bat`銆?3. 鏍规嵁瀹為檯鐜閫夋嫨 QQ 鎴栧井淇℃ā寮忋€?4. 鎵撳紑瀵瑰簲鍐滃満椤甸潰锛岀瓑寰呮帶鍒跺彴鏄剧ず涓婁笅鏂囧氨缁€?5. 鎸夐渶寮€鍚嚜鍔ㄥ啘鍦烘垨鍗曢」浠诲姟銆?
-寰俊妯″紡鐩墠瑕佹眰鐢ㄦ埛鎵嬪姩鎵撳紑寰俊鍐滃満椤甸潰锛涜嚜鍔ㄦ绱㈠拰鑷姩鎵撳紑寰俊瀹夸富灞炰簬鍚庣画鍔熻兘銆?
-## 鍏紑鍙戝竷鍘熷垯
+## Main Features
 
-- 鍏紑浠撳簱鍜屽彂甯冨寘鍙繚鐣欏彈淇濇姢鐗堟湰銆?- README銆丆HANGELOG 鍜屽彂甯冨叕鍛婂彧鎻忚堪鍔熻兘鍙樺寲锛屼笉鍏紑鍏蜂綋濂藉弸缂栧彿銆佹祴璇曟牱鏈紪鍙锋垨鍐呴儴璇嗗埆鏁板瓧銆?- 椤圭洰姘镐箙鍏嶈垂锛岀姝㈠皢鏈」鐩垨鏀瑰寘鐗堟湰鐢ㄤ簬鍊掑崠銆?
-## 鍙嶉
+- Own-farm automation for planting, harvesting, watering, weeding, pest removal, and related routine tasks.
+- Friend-farm patrol for stealing, helping, guard-dog reward handling, and safer fallback behavior.
+- Runtime support for QQ/Lite and WeChat/CDP modes.
+- Desktop shell, web dashboard, local logs, and runtime health checks.
+- Protected public release package with signed manifest, public verification files, and tamper checks.
 
-娆㈣繋閫氳繃椤圭洰璇存槑涓殑棰戦亾鍏ュ彛鍙嶉鏂板姛鑳藉缓璁€佽繍琛岄棶棰樺拰娓告垙鏇存柊閫傞厤鎯呭喌銆傚弽棣堟椂璇峰敖閲忔彁渚涚幇璞°€佸钩鍙般€佹ā寮忓拰鎿嶄綔姝ラ锛屼笉闇€瑕佸叕寮€涓汉璐﹀彿鎴栧ソ鍙嬬紪鍙枫€?
+## How To Use
+
+1. Download the protected release ZIP from GitHub Releases.
+2. Extract it to a short path that uses English characters where possible.
+3. Run `Windows_start.bat`.
+4. Choose QQ or WeChat mode according to your local runtime.
+5. Open the matching QQ Farm page and wait for the dashboard to report a ready context.
+6. Start auto farm or run individual tasks as needed.
+
+WeChat mode currently expects the user to open the WeChat QQ Farm page manually. Automatic discovery and automatic opening of the WeChat host may be improved in later versions.
+
+## Public Release Policy
+
+- The public repository and public release packages contain only the protected distribution.
+- Source artifacts stay in private storage and are not uploaded to the public repository.
+- Public README, changelog, and release notes describe feature-level changes only.
+- Do not publish personal account information, friend identifiers, test sample identifiers, or internal runtime IDs in public documentation.
+- The project remains free for public-benefit use.
+
+## Feedback
+
+Please report feature requests, runtime issues, and game-update compatibility problems through the public project channels. Include the visible symptom, platform, runtime mode, and reproduction steps when possible. Do not publish personal account data or friend identifiers.

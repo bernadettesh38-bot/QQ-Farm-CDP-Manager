@@ -1,28 +1,48 @@
-﻿# Changelog
+# Changelog
+
+## 2026-06-17 - 1.9.4
+
+- Replaced the public README, changelog, and GitHub release notes with clean English text to remove corrupted Chinese text from the public repository.
+- Kept the protected release flow unchanged: source artifacts remain private, and only protected public artifacts are published.
+- Kept the 1.9.3 desktop minimize button and guard-dog scheduler improvements in the public protected package.
 
 ## 2026-06-17 - 1.9.3
 
-- 妗岄潰澹冲鍔犳渶灏忓寲鎸夐挳锛屽彲浠ュ湪涓嶉€€鍑烘湇鍔＄殑鎯呭喌涓嬫敹璧峰埌鍚庡彴銆?
-- 鎶や富鐘鍔遍€氶亾鍦ㄨ繘鍏ュソ鍙嬪啘鍦哄悗澧炲姞鐘舵€佸埛鏂扮瓑寰呭拰澶氭澶嶆煡锛屽噺灏戝伓鍙戝埌杈惧悗鏃犲姩浣滆繑鍥炪€?
-- 鑷姩璋冨害缁撴灉澧炲姞鍙墽琛岀姸鎬併€佸€欓€夋潯浠跺拰澶辫触鍘熷洜锛屼究浜庡垎杈ㄧ湡瀹炲姩浣滀笌鐘舵€佹湭鍒锋柊銆?
-- README 鍜屽叕寮€鍙戝竷璇存槑缁х画淇濇寔姒傛嫭鎻忚堪锛屼笉鍏紑鍏蜂綋濂藉弸缂栧彿鎴栧唴閮ㄨ瘑鍒暟瀛椼€?
+- Added a minimize button to the desktop shell so the window can be hidden to the background without stopping the service.
+- Added guard-dog reward wait/probe logic after entering a friend's farm to reduce cases where the app arrives and returns without action.
+- Added clearer scheduler protocol fields for runnable candidates, readiness, cooldowns, skipped reasons, and confirmed real action progress.
+- Updated public documentation to describe changes without exposing friend identifiers, test sample IDs, or internal runtime IDs.
 
 ## 2026-06-16 - 1.9.2hotfix
 
-- 淇鎶や富鐘拰濂藉弸甯繖鑷姩璋冨害涓紝杩涘叆濂藉弸鍐滃満鍚庢湭绛夊緟鍔ㄤ綔灏辩洿鎺ヨ繑鍥炵殑闂銆?
-- 鎶や富鐘け璐ュ喎鍗寸敓鏁堟椂锛屼笉鍐嶆寜 1 绉掔┖杞噸璇曪紝鏀逛负绛夊喎鍗村埌鏈熷悗鍐嶅姞鍏ヨ皟搴︺€?
-- 淇 QQ 鍚姩鍚庣殑琛ヤ竵鐘舵€佸埛灞忥紝鐩稿悓鐨?game.js 宸叉槸鏈€鏂拌ˉ涓? 鍙湪鐘舵€佸彉鍖栨椂杈撳嚭銆?
+- Improved guard-dog and friend-help scheduling so empty or failed reward routes do not immediately spin every second.
+- Added idle backoff and wake-up behavior for guard-dog reward queues.
+- Reduced noisy QQ host bootstrap status refreshes when the runtime bundle is already current.
 
 ## 2026-06-16 - 1.9.2
 
-- 淇 QQ 瀹夸富鏂繛鍚庣殑閲嶅閲嶈繛涓庨噸鍚姈鍔紝琛ュ厖鎭㈠鍐峰嵈涓庤繍琛屾€佷繚鎶ゃ€?- 淇鎶や富鐘湡瀹炲ソ鍙嬪鍔遍摼璺笌璋冭瘯鎶ュ憡锛屾垚鍔熷拰澶辫触缁撴灉閮芥寜瀹為檯鐘舵€佽繑鍥炪€?- 浼樺寲濂藉弸鍋疯彍涓昏矾寰勶細鏅€氫綔鐗╀紭鍏堜竴閿敹鍙栵紝榛戝悕鍗曞懡涓€佺壒娈婁綔鐗╂垨閬楁紡鏃跺啀閫愬潡鍏滃簳銆?- 淇妗岄潰澹宠缃獥鍙ｅ拰 Web 鎺у埗鍙扮殑鐗堟湰灞曠ず锛岀粺涓€璺熼殢褰撳墠鐗堟湰銆?- README銆丆HANGELOG 鍜屽叕寮€鍙戝竷璇存槑缁х画淇濇寔姒傛嫭鎻忚堪锛屼笉鍏紑濂藉弸缂栧彿銆佹祴璇曟牱鏈紪鍙锋垨鍐呴儴璇嗗埆鏁板瓧銆?
+- Improved QQ host reconnect and recovery handling.
+- Fixed guard-dog reward reporting so success and failure states better reflect real runtime outcomes.
+- Improved friend-steal routing with one-click harvest first and safer fallback paths for special cases.
+- Kept public documentation at a high level without exposing private identifiers.
+
 ## 2026-06-16 - 1.9
 
-- 淇濂藉弸宸℃煡鏁忔劅搴︿笉瓒崇殑闂锛氬ソ鍙嬪垪琛ㄥ垵濮嬪氨瀛樺湪鍙伔鐘舵€佹椂锛屼篃浼氫富鍔ㄥ敜閱掑贰鏌ャ€?- 浼樺寲鑷姩璋冨害浼樺厛绾э細濂藉弸鍋疯彍鍒版湡鎴栬鍞ら啋鏃讹紝涓嶅啀琚鍔卞府鍔╃被浠诲姟闀挎湡鍘嬩綇銆?- 浼樺寲濂藉弸鍋疯彍璺緞锛氭櫘閫氫綔鐗╀紭鍏堣蛋娓告垙涓€閿敹鍙栵紝鐗规畩浣滅墿銆侀€愪釜鎴愮啛銆侀粦鍚嶅崟瑙勫垯鍜屽畨鍏ㄧ洰鏍囦负绌烘椂璧版槑纭厹搴曘€?- 寮哄寲濂藉弸涓婁笅鏂囩‘璁わ細濂藉弸韬唤銆佸啘鍦虹被鍨嬨€佸湡鍦拌妭鐐瑰拰杩愯鏃剁储寮曞紓甯告椂锛屼細閲嶆鎴栭噸鏂拌繘鍏ュ悗鍐嶆搷浣溿€?- 淇瀹夊叏鐩爣涓虹┖鏃惰鏄剧ず鎴愬姛璁块棶鐨勯棶棰橈紝澧炲姞鏄庣‘璺宠繃鍘熷洜鍜岃闂粨鏋滆褰曘€?- 浼樺寲寰俊/CDP銆丵Q/Lite 涓庡彈淇濇姢鐗堣繍琛岃矾寰勶紝鍑忓皯閲嶅鎵弿銆侀噸澶?CDP 璋冪敤鍜屽悗鍙板崱椤裤€?- 鏇存柊妗岄潰澹冲拰 Web 鎺у埗鍙扮殑鍝佺墝鐣岄潰涓庡浘鏍囪祫婧愩€?- README銆丆HANGELOG 鍜屽叕寮€鏇存柊鍏憡鏀逛负姒傛嫭鎻忚堪锛屼笉鍏紑娴嬭瘯鏍锋湰缂栧彿鎴栧唴閮ㄨ瘑鍒暟瀛椼€?
+- Improved friend-patrol sensitivity when the friend list already contains stealable or helpable state.
+- Improved scheduler priority so due friend-steal work is not starved by helper tasks.
+- Strengthened friend-context confirmation before acting on a farm.
+- Improved WeChat/CDP, QQ/Lite, and protected-runtime paths to reduce repeated scans and repeated CDP calls.
+- Updated desktop and web branding assets.
+
 ## 2026-06-15 - 1.8.9
 
-- 浼樺寲濂藉弸鍒囨崲銆佷笂涓嬫枃鎭㈠鍜屽悗鍙拌繛鎺ョǔ瀹氭€с€?- 浼樺寲鐗规畩浣滅墿璇嗗埆銆佸浘鏍囪ˉ榻愬拰鍙椾繚鎶ょ増鎬ц兘銆?- 澧炲姞骞冲彴鍒囨崲鏃剁殑鐘舵€侀殧绂讳笌閰嶇疆鎻愮ず锛岄伩鍏?QQ 涓庡井淇¤繍琛岀姸鎬佷簰鐩告薄鏌撱€?- 浼樺寲濂栧姳甯姪鐩稿叧閫昏緫锛屾敼涓虹紦瀛樹紭鍏堝拰鎵嬪姩鎵弿浼樺厛銆?
+- Improved friend switching, context recovery, and background connection stability.
+- Improved special-crop detection and protected build performance.
+- Added clearer platform switching status and configuration hints.
+- Changed reward-help handling to prefer cached and manually scanned data.
+
 ## 2026-06-14 - 1.8.8
 
-- 鍚堝苟鍥涢」淇姹狅細淇濇姢淇′换閾俱€佸ソ鍙嬩笂涓嬫枃纭銆佽繍琛屾椂鎵归噺鍋峰彇鍜岄瑙堟仮澶嶃€?- 浼樺寲鍥涙牸浣滅墿銆佹贩鍚堟垚鐔熴€侀€愪釜鍌啛鍜岄粦鍚嶅崟鍦烘櫙涓嬬殑鍋疯彍鍏滃簳銆?- 浼樺寲鍙椾繚鎶ゅ彂甯冩祦绋嬨€佸畬鏁存€ф牎楠屽拰鏈湴娴嬭瘯鍖呯敓鎴愩€?
-
+- Combined fixes for protected trust, friend-context confirmation, runtime batch stealing, and preview recovery.
+- Improved four-tile crop, mixed maturity, step-by-step maturity, and blacklist fallback handling.
+- Improved protected release generation, integrity verification, and local protected test package creation.
