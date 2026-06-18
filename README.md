@@ -4,10 +4,15 @@ QQ Farm CDP Manager is a protected desktop and web control tool for personal stu
 
 This project is permanently free for public-benefit use. Reselling paid copies or paid repackaged versions is not allowed.
 
-Current version: `v1.9.7`
+Current version: `v1.9.7-hotfix`
 
 ## What Is New
 
+- v1.9.7-hotfix makes QQ manual-host mode a persistent user-facing setting in the desktop shell and control page.
+- Users can switch between automatic QQ bootstrap and manual QQ host attach mode without PowerShell environment variables.
+- Manual QQ host mode is saved and restored after restart; advanced environment variables still work as overrides.
+- Light/dark theme mode now persists independently from Web automation and farm settings.
+- Saving Web automation settings now merges user settings safely and does not overwrite the selected theme mode.
 - v1.9.7 adds QQ manual-host fallback mode for machines where automatic QQ bootstrap still causes protected restart loops.
 - QQ restart diagnostics now record the restart source, runtime state before restart, and whether a recent live WebSocket or manual-host mode suppressed a reload.
 - Normal friend help now clears stale daily-limit state after changing the configured limit, so a previous 100-help state does not block a later 1000-help setting.

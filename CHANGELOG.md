@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026-06-18 - 1.9.7-hotfix
+
+### Fixed
+
+- Added a persistent user-facing QQ host mode setting.
+- Users can now switch between automatic QQ bootstrap and manual QQ host attach mode without using PowerShell environment variables.
+- Manual QQ host mode is now saved and restored after restart.
+- Fixed theme mode persistence.
+- Fixed an issue where enabling Web automation could unexpectedly switch between light and dark mode.
+- Fixed an issue where saving settings could overwrite the selected theme mode.
+- Improved user settings merge behavior to avoid unrelated settings being reset.
+
 ## 2026-06-18 - 1.9.7
 
 - Added QQ manual-host fallback mode (`--qq-manual-host` or `FARM_QQ_HOST_MODE=manual`) so affected protected users can open QQ Farm manually while the app waits, attaches to the detected host, and suppresses automatic reloads.

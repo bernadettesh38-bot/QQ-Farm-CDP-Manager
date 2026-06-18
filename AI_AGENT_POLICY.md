@@ -48,3 +48,9 @@ tracking, QQ manual-host fallback suppression, normal friend-help configured
 limit recalculation, candidate/dispatch/action proof, and own-farm
 harvest-to-plant delay reasons. A protected package that loses these traces
 must be treated as unverifiable until rebuilt through the signed release flow.
+
+Official maintenance must also preserve v1.9.7-hotfix user-setting behavior:
+QQ manual-host mode is a persistent user-facing setting, not an env-only
+developer switch, and theme mode must be merged independently from Web
+automation or farm settings. A protected package that overwrites theme mode
+while saving unrelated settings is not release-ready.
