@@ -4,11 +4,16 @@ QQ Farm CDP Manager is a protected desktop and web control tool for personal stu
 
 This project is permanently free for public-benefit use. Reselling paid copies or paid repackaged versions is not allowed.
 
-Current version: `v1.9.6`
+Current version: `v1.9.7`
 
 ## What Is New
 
-- Release candidate `v1.9.6-PUBLIC-20260618-003` is the protected package selected for final pre-release verification.
+- v1.9.7 adds QQ manual-host fallback mode for machines where automatic QQ bootstrap still causes protected restart loops.
+- QQ restart diagnostics now record the restart source, runtime state before restart, and whether a recent live WebSocket or manual-host mode suppressed a reload.
+- Normal friend help now clears stale daily-limit state after changing the configured limit, so a previous 100-help state does not block a later 1000-help setting.
+- Normal help diagnostics now distinguish schedule updates, candidate creation, task dispatch, real actions, and explicit skip reasons.
+- Own-farm planting now creates a prioritized plant-after-harvest follow-up and records delay reasons when dispatch takes longer than expected.
+- Release candidate `v1.9.6-PUBLIC-20260618-003` was the protected package selected for the previous v1.9.6 verification.
 - Protected desktop status now keeps layered readiness fields separate so a live local process is not reported as stopped just because one health probe is slow.
 - Desktop diagnostics now write JSONL traces for protected status, QQ runtime, scheduler decisions, own-farm work, friend stealing, normal help, and guard-dog help.
 - Fixed QQ one-click farming for the updated tool layout where weed and pest work share a visible work button instead of the old fixed indexes.

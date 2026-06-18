@@ -42,3 +42,9 @@ information.
 Runtime status and diagnostics in official protected packages should keep
 stable, ASCII-safe field names and reason codes so users can verify service
 state without exposing private account data or private source code.
+
+Official maintenance must preserve v1.9.7 diagnostics for QQ restart-source
+tracking, QQ manual-host fallback suppression, normal friend-help configured
+limit recalculation, candidate/dispatch/action proof, and own-farm
+harvest-to-plant delay reasons. A protected package that loses these traces
+must be treated as unverifiable until rebuilt through the signed release flow.

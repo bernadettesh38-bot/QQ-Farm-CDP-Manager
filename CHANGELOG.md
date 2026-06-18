@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-06-18 - 1.9.7
+
+- Added QQ manual-host fallback mode (`--qq-manual-host` or `FARM_QQ_HOST_MODE=manual`) so affected protected users can open QQ Farm manually while the app waits, attaches to the detected host, and suppresses automatic reloads.
+- Added QQ restart-source diagnostics for bootstrap, process guard, manual-host suppression, WebSocket state, GameCtl readiness, runtime-context readiness, and health timeout state.
+- Fixed normal friend-help limit handling so stale state from the old 100-help boundary is recalculated after the configured limit changes, including 100 to 1000.
+- Added normal friend-help diagnostics for configured/effective limit, counter state, candidate creation, schedule-only no-ops, dispatch, real action execution, and skip reasons.
+- Prioritized own-farm plant-after-harvest follow-up work and added harvest-to-plant delay diagnostics with reason codes for runtime readiness, state refresh, seed strategy, no seed, scheduler queue, and cooldown.
+- Wired v1.9.7 regression checks into the dual release gate alongside protected desktop diagnostics, guard-dog, planting, and protected-runtime checks.
+
 ## 2026-06-18 - 1.9.6-PUBLIC-20260618-003
 
 - Prepared the final v1.9.6 protected release candidate from build `PUBLIC-20260618-003`; older build ids `20260617-007`, `20260618-001`, and `20260618-002` must not be published for this release.
