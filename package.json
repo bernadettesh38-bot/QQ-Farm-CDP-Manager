@@ -1,0 +1,55 @@
+{
+  "name": "qq-farm-cdp-auto",
+  "version": "1.9.8-hotfix",
+  "private": true,
+  "license": "SEE LICENSE IN LICENSE",
+  "description": "QQ Farm automation control - Bernadette Edition",
+  "author": "bernadettesh38-bot",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bernadettesh38-bot/QQ-Farm-CDP-Manager.git"
+  },
+  "dependencies": {
+    "frida": "^16.6.6",
+    "protobufjs": "^8.6.3",
+    "ws": "^8.21.0"
+  },
+  "scripts": {
+    "start": "node run.cjs",
+    "start:qq": "node run.cjs --qq",
+    "start:wx": "node run.cjs --wx",
+    "start:auto": "node run.cjs --auto-farm",
+    "start:qq:auto": "node run.cjs --qq --auto-farm",
+    "start:wx:auto": "node run.cjs --wx --auto-farm",
+    "gateway": "node src/index.js",
+    "qq:build-lite": "node scripts/build-button-lite.cjs",
+    "qq:bundle": "node scripts/patch-qq-miniapp.cjs --bundle-only",
+    "qq:verify": "node scripts/verify-qq-bundle.cjs",
+    "test:qq-discovery": "node scripts/test-qq-miniapp-discovery.cjs",
+    "test:qq-bootstrap": "node scripts/test-qq-host-bootstrap.cjs",
+    "test:qq-protected-host": "node scripts/test-qq-protected-host-runtime.cjs",
+    "test:wx-platform-switch": "node scripts/test-wx-platform-switch-context.cjs",
+    "test:profile-runtime-cache": "node scripts/test-player-profile-runtime-cache.cjs",
+    "test:scheduler-protocol": "node scripts/test-auto-farm-scheduler-protocol.cjs",
+    "qq:reward-popup": "node scripts/reward-popup-interceptor.cjs",
+    "repair": "node scripts/repair-project.cjs",
+    "qq:patch": "node scripts/patch-qq-miniapp.cjs",
+    "qq:images": "node scripts/extract-qq-miniapp-images.cjs",
+    "release:prepare": "node scripts/prepare-release.cjs --publish --keep-node-modules",
+    "release:verify": "node scripts/verify-release-package.cjs",
+    "test:background": "node scripts/test-background-window-keeper.cjs",
+    "test:background:win32": "node scripts/test-background-window-keeper-win32.cjs",
+    "test:config-import": "node scripts/test-legacy-config-import.cjs",
+    "release:slim": "node scripts/prepare-release.cjs --publish",
+    "clean:runtime": "node scripts/prepare-release.cjs",
+    "wmpf": "node wmpf/src/index.js",
+    "wmpf:auto": "node wmpf/src/index.js --auto-farm",
+    "desktop:sample": "electron desktop-sample/main.js"
+  },
+  "devDependencies": {
+    "electron": "^42.4.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

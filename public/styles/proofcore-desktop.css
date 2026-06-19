@@ -1,0 +1,190 @@
+:root {
+  --bg: rgba(3, 7, 18, 0.9);
+  --line: rgba(139, 169, 203, 0.18);
+  --text: rgba(238, 245, 255, 0.96);
+  --muted: rgba(143, 161, 181, 0.82);
+  --good: #9bc0ff;
+  --warn: #ffc857;
+  --bad: #ff6b7a;
+  --primary: #f4f4f5;
+  --primary-text: #111827;
+  --shadow: 0 18px 54px rgba(0, 0, 0, 0.34);
+  --radius: 12px;
+  --radius-sm: 8px;
+}
+
+html,
+body {
+  background: transparent;
+}
+
+.shell {
+  position: relative;
+  border: 1px solid rgba(139, 169, 203, 0.18);
+  border-radius: 12px;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.016) 1px, transparent 1px),
+    radial-gradient(circle at 12% 0%, rgba(91, 139, 235, 0.14), transparent 32%),
+    rgba(3, 7, 18, 0.88);
+  background-size: 48px 48px, 48px 48px, auto, auto;
+  box-shadow:
+    0 24px 70px rgba(0, 0, 0, 0.42),
+    inset 0 1px 0 rgba(255, 255, 255, 0.055);
+  backdrop-filter: blur(24px) saturate(1.18);
+}
+
+.brand-mark {
+  border-radius: 9px;
+  box-shadow: 0 0 24px rgba(91, 139, 235, 0.22);
+}
+
+.title-copy h1 {
+  color: #f6f8fb;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.dot.good {
+  background: #9bc0ff;
+  box-shadow: 0 0 0 5px rgba(105, 151, 246, 0.1), 0 0 16px rgba(105, 151, 246, 0.52);
+}
+
+.account-pill,
+.section,
+.card {
+  border-color: rgba(139, 169, 203, 0.16);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.036), transparent 54%),
+    rgba(255, 255, 255, 0.025);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+.emoji-box,
+.version-badge {
+  color: #dce8fb;
+  background: rgba(91, 139, 235, 0.09);
+}
+
+.public-benefit-badge {
+  border-color: rgba(139, 169, 203, 0.24);
+  color: #dce8fb;
+  background: rgba(91, 139, 235, 0.08);
+}
+
+.ghost-btn,
+.close-btn,
+.quick-link-btn,
+.seg-btn,
+.primary.alt,
+.community-close {
+  border-color: rgba(139, 169, 203, 0.18);
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.ghost-btn:hover,
+.close-btn:hover,
+.quick-link-btn:hover,
+.seg-btn:hover:enabled,
+.primary.alt:hover:enabled {
+  border-color: rgba(126, 171, 255, 0.34);
+  background: rgba(255, 255, 255, 0.085);
+}
+
+.seg-btn.on {
+  color: #111827;
+  border-color: rgba(255, 255, 255, 0.9);
+  background: linear-gradient(180deg, #f7f7f8, #d8d8dc);
+}
+
+.primary {
+  border-radius: 8px;
+  background: linear-gradient(180deg, #f7f7f8, #d4d4d8);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.08);
+}
+
+.community-modal {
+  background: rgba(1, 4, 10, 0.76);
+}
+
+.community-card {
+  border-color: rgba(139, 169, 203, 0.2);
+  border-radius: 12px;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(91, 139, 235, 0.12), transparent 34%),
+    rgba(5, 11, 23, 0.98);
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --bg: rgba(246, 249, 253, 0.94);
+  --line: rgba(49, 65, 88, 0.17);
+  --text: rgba(23, 32, 51, 0.96);
+  --muted: rgba(83, 99, 122, 0.86);
+  --primary: #172033;
+  --primary-text: #ffffff;
+  --shadow: 0 18px 54px rgba(48, 63, 82, 0.18);
+}
+
+[data-theme="light"] .shell {
+  border-color: rgba(49, 65, 88, 0.16);
+  background:
+    linear-gradient(rgba(31, 48, 72, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(31, 48, 72, 0.022) 1px, transparent 1px),
+    radial-gradient(circle at 12% 0%, rgba(91, 139, 235, 0.11), transparent 32%),
+    rgba(246, 249, 253, 0.94);
+  box-shadow:
+    0 24px 70px rgba(48, 63, 82, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="light"] .title-copy h1 {
+  color: #172033;
+}
+
+[data-theme="light"] .account-pill,
+[data-theme="light"] .section,
+[data-theme="light"] .card {
+  border-color: rgba(49, 65, 88, 0.14);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.82), transparent 54%),
+    rgba(255, 255, 255, 0.62);
+}
+
+[data-theme="light"] .emoji-box,
+[data-theme="light"] .version-badge,
+[data-theme="light"] .public-benefit-badge {
+  color: #34445b;
+  border-color: rgba(49, 65, 88, 0.15);
+  background: rgba(255, 255, 255, 0.68);
+}
+
+[data-theme="light"] .ghost-btn,
+[data-theme="light"] .close-btn,
+[data-theme="light"] .quick-link-btn,
+[data-theme="light"] .seg-btn,
+[data-theme="light"] .primary.alt,
+[data-theme="light"] .community-close {
+  color: var(--text);
+  border-color: rgba(49, 65, 88, 0.16);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+[data-theme="light"] .seg-btn.on,
+[data-theme="light"] .primary {
+  color: #fff;
+  border-color: #172033;
+  background: linear-gradient(180deg, #27364e, #172033);
+}
+
+[data-theme="light"] .community-modal {
+  background: rgba(226, 233, 243, 0.76);
+}
+
+[data-theme="light"] .community-card {
+  border-color: rgba(49, 65, 88, 0.16);
+  background:
+    radial-gradient(circle at 12% 0%, rgba(91, 139, 235, 0.1), transparent 34%),
+    rgba(250, 252, 255, 0.98);
+}

@@ -1,5 +1,31 @@
 # Changelog
 
+## 2026-06-18 - 1.9.8-hotfix
+
+### Fixed
+
+- Fixed the desktop shell Settings button after LAN mobile control changes by opening the local settings page through `127.0.0.1` even when the gateway listens on `0.0.0.0`.
+- Reduced desktop shell crowding by increasing the shell height, allowing vertical scrolling, and moving secondary status cards behind a collapsed "More status" section.
+- Changed `/mobile.html` to serve the full web control page with mobile-adaptive CSS and token-aware fetch handling instead of a reduced partial page.
+- Implemented the two-step friend mischief runtime action: click a friend land tile first, wait for the grass or bug component, then click that component before counting the action.
+- Rebuilt `button-lite.js` so protected packages include the friend mischief runtime method.
+- Re-verified light/dark theme persistence through the user settings persistence test.
+
+## 2026-06-18 - 1.9.8-test
+
+### Added
+
+- Added a low-priority `friend_mischief` scheduler task for friend-farm grass and bug actions after entering a friend's farm.
+- Added a shared friend mischief daily ledger stored under stable user data, with grass and bug actions sharing one hard-capped 100-action daily limit.
+- Added friend mischief diagnostics in `friend-mischief-trace.jsonl` with ledger, candidate, enter-farm, action, and counter-result reason codes.
+- Added disabled-by-default LAN mobile control settings with random token protection, mobile config update API, and mobile page entry.
+
+### Changed
+
+- Added friend mischief controls to the web dashboard and kept the task lower priority than own-farm work, normal help, guard-dog help, and friend stealing.
+- LAN mobile access remains local-only unless explicitly enabled; non-local LAN clients must pass token validation when required.
+- Added release-gate tests for friend mischief config, friend mischief ledger persistence, and LAN mobile control safety.
+
 ## 2026-06-18 - 1.9.7-hotfix
 
 ### Fixed

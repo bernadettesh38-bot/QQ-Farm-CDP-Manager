@@ -1,0 +1,927 @@
+:root {
+  color-scheme: dark;
+  --bg: #030712;
+  --bg-deep: #02050b;
+  --panel: rgba(10, 17, 28, 0.82);
+  --panel-strong: rgba(14, 23, 37, 0.96);
+  --line: rgba(139, 169, 203, 0.18);
+  --line-strong: rgba(139, 169, 203, 0.34);
+  --text: #eef5ff;
+  --muted: #8fa1b5;
+  --accent: #f4f4f5;
+  --accent-strong: #ffffff;
+  --soil: #7da8ff;
+  --soil-soft: rgba(91, 139, 235, 0.12);
+  --leaf-soft: rgba(113, 159, 255, 0.11);
+  --warn: #ffc857;
+  --bad: #ff6b7a;
+  --shadow: 0 24px 70px rgba(0, 0, 0, 0.3);
+  --radius-xl: 12px;
+  --radius-lg: 10px;
+  --radius-md: 8px;
+  --radius-sm: 7px;
+}
+
+html {
+  background: #030712;
+}
+
+body {
+  position: relative;
+  background:
+    radial-gradient(circle at 16% 4%, rgba(83, 126, 224, 0.12), transparent 27%),
+    radial-gradient(circle at 88% 18%, rgba(109, 151, 238, 0.08), transparent 25%),
+    #030712;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+body::before {
+  z-index: 0;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(180deg, transparent, #000 10%, #000 82%, transparent);
+}
+
+body::after {
+  z-index: 0;
+  opacity: 0.5;
+  background-image:
+    radial-gradient(circle, rgba(158, 184, 232, 0.72) 0 1px, transparent 1.2px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.38) 0 1px, transparent 1.3px);
+  background-position: 0 0, 37px 61px;
+  background-size: 128px 128px, 173px 173px;
+  mask-image: linear-gradient(180deg, #000, transparent 72%);
+}
+
+::selection {
+  color: #02050b;
+  background: #f4f4f5;
+}
+
+.page-shell {
+  position: relative;
+  z-index: 1;
+  max-width: 1420px;
+  padding: 96px 28px 42px;
+}
+
+.proofcore-app-header {
+  --nav-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  position: fixed;
+  top: 0;
+  left: 50%;
+  z-index: 60;
+  display: grid;
+  grid-template-columns: 84px minmax(0, 1fr) 104px;
+  align-items: center;
+  gap: 18px;
+  width: min(1420px, calc(100% - 56px));
+  height: 64px;
+  padding: 12px 16px;
+  border: 1px solid transparent;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  transform: translateX(-50%);
+  transition:
+    top 520ms var(--nav-ease),
+    width 520ms var(--nav-ease),
+    height 520ms var(--nav-ease),
+    padding 520ms var(--nav-ease),
+    gap 520ms var(--nav-ease),
+    border-color 520ms var(--nav-ease),
+    border-radius 520ms var(--nav-ease),
+    background-color 520ms var(--nav-ease),
+    box-shadow 520ms var(--nav-ease);
+}
+
+.proofcore-app-header.is-compact {
+  top: 12px;
+  grid-template-columns: 48px minmax(0, 1fr) 84px;
+  gap: 10px;
+  width: min(880px, calc(100% - 32px));
+  height: 52px;
+  padding: 7px 12px;
+  border-color: rgba(126, 171, 255, 0.18);
+  border-radius: 999px;
+  background-color: rgba(4, 10, 22, 0.82);
+  box-shadow:
+    0 18px 54px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 0 34px rgba(72, 126, 255, 0.16);
+  backdrop-filter: blur(16px) saturate(1.16);
+}
+
+.proofcore-brand {
+  display: flex;
+  align-items: center;
+  width: 64px;
+  height: 40px;
+  overflow: hidden;
+  transition: width 520ms var(--nav-ease), height 520ms var(--nav-ease);
+}
+
+.proofcore-brand img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.proofcore-app-header.is-compact .proofcore-brand {
+  width: 42px;
+  height: 26px;
+}
+
+.proofcore-public-badge {
+  justify-self: end;
+  padding: 7px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.86);
+  background: rgba(255, 255, 255, 0.045);
+  font-size: 0.72rem;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: padding 520ms var(--nav-ease), font-size 520ms var(--nav-ease);
+}
+
+.proofcore-app-header.is-compact .proofcore-public-badge {
+  padding: 5px 8px;
+  font-size: 0.65rem;
+}
+
+.status-strip {
+  gap: 10px;
+  margin: 0 0 14px;
+}
+
+.status-chip {
+  position: relative;
+  min-height: 78px;
+  overflow: hidden;
+  border-color: var(--line);
+  border-radius: 10px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.045), transparent 58%),
+    rgba(9, 16, 27, 0.72);
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.045);
+  backdrop-filter: blur(16px);
+}
+
+.status-chip::after {
+  content: "";
+  position: absolute;
+  right: -28px;
+  bottom: -34px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(105, 151, 246, 0.14), transparent 68%);
+}
+
+.chip-label {
+  color: #75879c;
+  font-size: 0.68rem;
+}
+
+.chip-value {
+  color: #eef5ff;
+  font-size: 0.87rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: #657386;
+  box-shadow: 0 0 0 5px rgba(116, 134, 156, 0.08);
+}
+
+.dot.ok {
+  background: #9bc0ff;
+  box-shadow: 0 0 0 5px rgba(105, 151, 246, 0.11), 0 0 15px rgba(105, 151, 246, 0.62);
+}
+
+.tabbar {
+  position: relative;
+  top: auto;
+  z-index: 1;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 8px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  scrollbar-width: none;
+  transition: gap 520ms var(--nav-ease);
+}
+
+.proofcore-app-header.is-compact .tabbar {
+  gap: 2px;
+}
+
+.tabbar::-webkit-scrollbar {
+  display: none;
+}
+
+.tab-btn {
+  flex: 0 0 auto;
+  padding: 0.5rem 0.68rem;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  color: rgba(222, 232, 245, 0.62);
+  font-size: 0.78rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition:
+    padding 520ms var(--nav-ease),
+    font-size 520ms var(--nav-ease),
+    color 180ms ease,
+    background 180ms ease,
+    border-color 180ms ease;
+}
+
+.proofcore-app-header.is-compact .tab-btn {
+  padding: 0.38rem 0.45rem;
+  font-size: 0.69rem;
+}
+
+.tab-btn:hover {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.tab-btn.on {
+  color: #111827;
+  border-color: rgba(255, 255, 255, 0.9);
+  background: linear-gradient(180deg, #f7f7f8, #d8d8dc);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.1);
+}
+
+.panel.on {
+  animation: proofcore-panel-in 320ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes proofcore-panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.panel-grid,
+.stack {
+  gap: 14px;
+}
+
+.card,
+.runtime-modal,
+.project-info-modal,
+.maturity-modal,
+.friend-rule-modal,
+.toast-card,
+.save-draft-bar {
+  border-color: var(--line);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.034), transparent 42%),
+    rgba(9, 16, 27, 0.86);
+  box-shadow:
+    0 20px 56px rgba(0, 0, 0, 0.26),
+    inset 0 1px 0 rgba(255, 255, 255, 0.045);
+  backdrop-filter: blur(18px) saturate(1.12);
+}
+
+.card {
+  position: relative;
+  padding: 18px;
+  border-radius: 10px;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.card:hover {
+  border-color: rgba(139, 169, 203, 0.28);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.047), transparent 42%),
+    rgba(10, 18, 30, 0.9);
+}
+
+.card h2,
+.card h3,
+.card h4,
+.runtime-modal h2,
+.project-info-modal h3,
+.project-info-modal h4 {
+  color: #f5f8fc;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.hint,
+.card-head p,
+.summary-note,
+.friend-empty,
+.warehouse-selection-note {
+  color: var(--muted);
+}
+
+code {
+  color: #c9dcff;
+  background: rgba(91, 139, 235, 0.12);
+}
+
+.field-block input,
+.field-block select,
+input.field,
+textarea.field,
+select.field,
+select,
+input[type="text"],
+input[type="number"],
+input[type="search"],
+textarea {
+  border-color: rgba(139, 169, 203, 0.2);
+  color: var(--text);
+  background: rgba(3, 8, 16, 0.66);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #607187;
+}
+
+.field-block input:focus,
+.field-block select:focus,
+input.field:focus,
+textarea.field:focus,
+select:focus,
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: rgba(126, 171, 255, 0.58);
+  box-shadow: 0 0 0 3px rgba(72, 126, 255, 0.11), 0 0 24px rgba(72, 126, 255, 0.08);
+}
+
+input[type="checkbox"] {
+  accent-color: #9abaff;
+}
+
+.check-card,
+.tag-check,
+.own-task-option,
+.message-push-channel-pill,
+.warehouse-card,
+.backpack-seed-card {
+  border-color: rgba(139, 169, 203, 0.16);
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.028);
+}
+
+.check-card:hover,
+.tag-check:hover,
+.own-task-option:hover,
+.warehouse-card:hover,
+.backpack-seed-card:hover {
+  border-color: rgba(126, 171, 255, 0.34);
+  background: rgba(91, 139, 235, 0.065);
+}
+
+.auto-section,
+.auto-module-card,
+.auto-module-empty,
+.message-push-config-card,
+.subsection-card,
+.steal-blacklist-box,
+.backpack-priority-box,
+.steal-crop-card,
+.friend-item-card,
+.crop-analysis-card,
+.crop-analysis-meta-item,
+.strategy-recommend-card,
+.analysis-card,
+.land-chip,
+.land-card,
+.warehouse-sell-category-option,
+.maturity-event-item,
+.preview-empty,
+.today-stats-card,
+.today-stats-overview-item,
+.today-stat-item {
+  border-color: rgba(139, 169, 203, 0.16);
+  color: var(--text);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.03), transparent 56%),
+    rgba(255, 255, 255, 0.025);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.022);
+}
+
+.auto-module-card:hover,
+.friend-item-card:hover,
+.crop-analysis-card:hover,
+.strategy-recommend-card:hover,
+.analysis-card:hover,
+.land-card:hover {
+  border-color: rgba(126, 171, 255, 0.3);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.045), transparent 56%),
+    rgba(91, 139, 235, 0.045);
+}
+
+.friend-item-card.blocked,
+.land-card.dead {
+  border-color: rgba(255, 107, 122, 0.25);
+  background: rgba(255, 107, 122, 0.045);
+}
+
+.steal-crop-card.on,
+.backpack-seed-card.selected,
+.warehouse-card.selected,
+.warehouse-sell-category-option.is-active {
+  border-color: rgba(126, 171, 255, 0.42);
+  background: rgba(91, 139, 235, 0.09);
+}
+
+.steal-blacklist-count,
+.backpack-priority-count {
+  border-color: rgba(139, 169, 203, 0.2);
+  color: #dce8fb;
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.summary-note,
+.friend-empty,
+.log-data-full {
+  border-color: rgba(139, 169, 203, 0.14);
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.log-filter-btn,
+.log-data-toggle {
+  border-color: rgba(139, 169, 203, 0.18);
+  color: #dce8fb;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.log-filter-btn:hover,
+.log-filter-btn.is-active,
+.log-data-toggle:hover {
+  border-color: rgba(126, 171, 255, 0.34);
+  color: #fff;
+  background: rgba(91, 139, 235, 0.09);
+}
+
+.auto-module-state.is-on,
+.friend-pill,
+.warehouse-sale-pill,
+.warehouse-tag.good {
+  border-color: rgba(126, 171, 255, 0.28);
+  color: #b9d0ff;
+  background: rgba(91, 139, 235, 0.1);
+}
+
+.auto-module-state.is-wait,
+.friend-pill.warn,
+.warehouse-sale-pill.warn,
+.warehouse-tag.warn {
+  border-color: rgba(255, 200, 87, 0.28);
+  color: #ffd778;
+  background: rgba(255, 200, 87, 0.09);
+}
+
+.auto-module-state.is-pause,
+.friend-pill.bad {
+  border-color: rgba(255, 107, 122, 0.28);
+  color: #ff9ca6;
+  background: rgba(255, 107, 122, 0.09);
+}
+
+.auto-module-state.is-off,
+.backpack-seed-badge,
+.warehouse-tag {
+  border-color: rgba(139, 169, 203, 0.16);
+  color: #9eafc2;
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.message-push-channel-pill.is-active,
+.backpack-seed-badge.available,
+.backpack-seed-badge.priority {
+  border-color: rgba(126, 171, 255, 0.3);
+  color: #c4d8ff;
+  background: rgba(91, 139, 235, 0.1);
+}
+
+.warehouse-card-image {
+  border-color: rgba(139, 169, 203, 0.14);
+  background:
+    radial-gradient(circle at 50% 45%, rgba(91, 139, 235, 0.13), transparent 62%),
+    rgba(3, 8, 16, 0.7);
+}
+
+.today-stats-picker select {
+  border-color: rgba(139, 169, 203, 0.2);
+  color: var(--text);
+  background: rgba(3, 8, 16, 0.66);
+}
+
+button.action,
+button.ghost,
+.warehouse-tab-btn,
+.today-stats-range-btn,
+.own-task-fold-btn {
+  border-color: rgba(139, 169, 203, 0.2);
+  border-radius: 7px;
+  color: rgba(238, 245, 255, 0.9);
+  background: rgba(255, 255, 255, 0.045);
+  box-shadow: none;
+}
+
+button.action:hover,
+button.ghost:hover,
+.warehouse-tab-btn:hover,
+.today-stats-range-btn:hover,
+.own-task-fold-btn:hover {
+  border-color: rgba(126, 171, 255, 0.36);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.085);
+  transform: translateY(-1px);
+}
+
+button.action,
+button.action.secondary,
+.warehouse-tab-btn.active,
+.today-stats-range-btn.active {
+  border-color: rgba(255, 255, 255, 0.88);
+  color: #111827;
+  background: linear-gradient(180deg, #f7f7f8, #d4d4d8);
+}
+
+button.action.secondary {
+  color: #e7eef9;
+  border-color: rgba(139, 169, 203, 0.22);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+pre.log {
+  border-color: rgba(139, 169, 203, 0.16);
+  color: #b9cae0;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    #02060d;
+  background-size: 100% 24px;
+}
+
+.runtime-overlay,
+.project-info-overlay,
+.maturity-overlay,
+.friend-rule-overlay {
+  background: rgba(1, 4, 10, 0.72);
+  backdrop-filter: blur(10px);
+}
+
+.runtime-modal,
+.project-info-modal,
+.maturity-modal,
+.friend-rule-modal {
+  color: var(--text);
+  border-radius: 12px;
+}
+
+.project-info-lead,
+.project-info-section,
+.runtime-hero {
+  border-color: rgba(139, 169, 203, 0.16);
+  color: var(--text);
+  background:
+    radial-gradient(circle at 14% 0%, rgba(91, 139, 235, 0.1), transparent 36%),
+    rgba(255, 255, 255, 0.028);
+  box-shadow: none;
+}
+
+.project-info-body a {
+  color: #9abaff;
+}
+
+.project-info-close,
+.maturity-modal-close,
+.friend-rule-modal-close {
+  color: var(--text);
+  border-color: rgba(139, 169, 203, 0.2);
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.left-float-actions {
+  left: 18px;
+  gap: 8px;
+}
+
+.github-float-btn {
+  width: 46px;
+  height: 46px;
+  border-color: rgba(139, 169, 203, 0.22);
+  color: #e9f1ff;
+  background: rgba(5, 11, 23, 0.86);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.3);
+}
+
+.github-float-btn:hover {
+  border-color: rgba(126, 171, 255, 0.42);
+  background: rgba(12, 23, 41, 0.95);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.38), 0 0 26px rgba(72, 126, 255, 0.12);
+}
+
+.auto-farm-float-btn {
+  color: #101827;
+  border-color: rgba(255, 255, 255, 0.9);
+  background: #f4f4f5;
+}
+
+.auto-farm-float-btn[data-running="true"] {
+  color: #fff;
+  border-color: rgba(255, 107, 122, 0.5);
+  background: #a83f50;
+}
+
+.public-benefit-mark {
+  border-color: rgba(139, 169, 203, 0.2);
+  color: #dce8fb;
+  background: rgba(5, 11, 23, 0.82);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.26);
+}
+
+.toast-card.ok {
+  border-color: rgba(126, 171, 255, 0.44);
+}
+
+.toast-card.bad {
+  border-color: rgba(255, 107, 122, 0.5);
+}
+
+.toast-card.ok,
+.toast-card.bad,
+.save-draft-bar {
+  color: var(--text);
+  background:
+    radial-gradient(circle at 12% 0%, rgba(91, 139, 235, 0.1), transparent 38%),
+    rgba(8, 15, 26, 0.97);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(3, 7, 18, 0.7);
+}
+
+::-webkit-scrollbar-thumb {
+  border: 2px solid rgba(3, 7, 18, 0.8);
+  border-radius: 999px;
+  background: rgba(139, 169, 203, 0.28);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 169, 203, 0.42);
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f4f7fb;
+  --bg-deep: #e9eef6;
+  --panel: rgba(255, 255, 255, 0.86);
+  --panel-strong: rgba(255, 255, 255, 0.98);
+  --line: rgba(53, 72, 96, 0.16);
+  --line-strong: rgba(53, 72, 96, 0.3);
+  --text: #172033;
+  --muted: #66758a;
+  --accent: #172033;
+  --accent-strong: #050b16;
+  --soil: #315fbd;
+  --soil-soft: rgba(49, 95, 189, 0.1);
+  --leaf-soft: rgba(49, 95, 189, 0.08);
+  --shadow: 0 24px 70px rgba(48, 63, 82, 0.13);
+}
+
+[data-theme="light"],
+[data-theme="light"] body {
+  background-color: #f4f7fb;
+}
+
+[data-theme="light"] body {
+  color: var(--text);
+  background:
+    radial-gradient(circle at 16% 4%, rgba(76, 120, 211, 0.1), transparent 27%),
+    radial-gradient(circle at 88% 18%, rgba(93, 131, 201, 0.08), transparent 25%),
+    #f4f7fb;
+}
+
+[data-theme="light"] body::before {
+  background:
+    linear-gradient(rgba(31, 48, 72, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(31, 48, 72, 0.035) 1px, transparent 1px);
+}
+
+[data-theme="light"] body::after {
+  opacity: 0.28;
+  background-image:
+    radial-gradient(circle, rgba(60, 91, 145, 0.46) 0 1px, transparent 1.2px),
+    radial-gradient(circle, rgba(60, 91, 145, 0.24) 0 1px, transparent 1.3px);
+}
+
+[data-theme="light"] .proofcore-app-header.is-compact {
+  border-color: rgba(53, 72, 96, 0.16);
+  background-color: rgba(250, 252, 255, 0.9);
+  box-shadow:
+    0 18px 54px rgba(56, 72, 96, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 0 34px rgba(72, 126, 255, 0.08);
+}
+
+[data-theme="light"] .proofcore-public-badge,
+[data-theme="light"] .public-benefit-mark {
+  color: #34445b;
+  border-color: rgba(53, 72, 96, 0.16);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+[data-theme="light"] .tab-btn {
+  color: rgba(42, 55, 75, 0.68);
+}
+
+[data-theme="light"] .tab-btn:hover,
+[data-theme="light"] .tab-btn.on {
+  color: #111827;
+  border-color: rgba(53, 72, 96, 0.16);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="light"] .status-chip,
+[data-theme="light"] .card,
+[data-theme="light"] .section-card,
+[data-theme="light"] .panel-card,
+[data-theme="light"] .modal-card,
+[data-theme="light"] .project-info-card,
+[data-theme="light"] .friend-card,
+[data-theme="light"] .warehouse-card,
+[data-theme="light"] .land-card,
+[data-theme="light"] .analysis-card,
+[data-theme="light"] .scheduler-task-card,
+[data-theme="light"] .check-card {
+  color: var(--text);
+  border-color: var(--line);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.8), transparent 58%),
+    rgba(255, 255, 255, 0.76);
+  box-shadow:
+    0 16px 40px rgba(48, 63, 82, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="light"] .chip-label,
+[data-theme="light"] .hint,
+[data-theme="light"] .summary-note,
+[data-theme="light"] small,
+[data-theme="light"] .muted {
+  color: var(--muted);
+}
+
+[data-theme="light"] .chip-value,
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] strong,
+[data-theme="light"] label {
+  color: var(--text);
+}
+
+[data-theme="light"] input,
+[data-theme="light"] select,
+[data-theme="light"] textarea,
+[data-theme="light"] pre,
+[data-theme="light"] code {
+  color: #172033;
+  border-color: rgba(53, 72, 96, 0.18);
+  background: rgba(255, 255, 255, 0.84);
+}
+
+[data-theme="light"] button.action,
+[data-theme="light"] .action,
+[data-theme="light"] .ghost,
+[data-theme="light"] .icon-btn {
+  color: #172033;
+  border-color: rgba(53, 72, 96, 0.18);
+  background: rgba(255, 255, 255, 0.84);
+}
+
+[data-theme="light"] .toast-card.ok,
+[data-theme="light"] .toast-card.bad,
+[data-theme="light"] .save-draft-bar {
+  color: var(--text);
+  background:
+    radial-gradient(circle at 12% 0%, rgba(91, 139, 235, 0.08), transparent 38%),
+    rgba(255, 255, 255, 0.98);
+}
+
+[data-theme="light"] ::-webkit-scrollbar-track {
+  background: rgba(226, 233, 243, 0.8);
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+  border-color: rgba(226, 233, 243, 0.9);
+  background: rgba(82, 102, 130, 0.28);
+}
+
+@media (max-width: 900px) {
+  .page-shell {
+    padding: 82px 14px 34px;
+  }
+
+  .proofcore-app-header {
+    grid-template-columns: 54px minmax(0, 1fr);
+    width: calc(100% - 28px);
+    padding-inline: 10px;
+  }
+
+  .proofcore-app-header.is-compact {
+    grid-template-columns: 44px minmax(0, 1fr);
+    width: calc(100% - 28px);
+  }
+
+  .proofcore-public-badge {
+    display: none;
+  }
+
+  .status-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .proofcore-app-header {
+    height: 70px;
+  }
+
+  .proofcore-app-header.is-compact {
+    height: 52px;
+  }
+
+  .status-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .tab-btn {
+    width: auto;
+    text-align: left;
+  }
+
+  .left-float-actions {
+    top: auto;
+    bottom: 72px;
+    left: 14px;
+    flex-direction: row;
+    transform: none;
+  }
+
+  .github-float-btn {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
