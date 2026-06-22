@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-06-22 - 1.9.8-hotfix2
+
+### Fixed
+
+- Reverted the long-idle disconnect prompt auto-click method and removed the public `gameCtl.clickIdleDisconnectPrompt` runtime/RPC entry.
+- Replaced popup auto-clicking with a configurable `idleDisconnectWatch` keepalive interaction that sends a lightweight manual-style click every 150 minutes.
+- The keepalive path records detection and failures but does not click the "next time" disconnect prompt after it is already visible.
+- Kept the light/dark theme persistence merge checks in the release gate so Web automation and config saves cannot overwrite the selected theme.
+
 ## 2026-06-22 - 1.9.8-hotfix
 
 ### Fixed
