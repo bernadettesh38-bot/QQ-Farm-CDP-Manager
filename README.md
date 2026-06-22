@@ -4,10 +4,13 @@ QQ Farm CDP Manager is a protected desktop and web control tool for personal stu
 
 This project is permanently free for public-benefit use. Reselling paid copies or paid repackaged versions is not allowed.
 
-Current version: `v1.9.8-hotfix3`
+Current version: `v1.9.8-hotfix4`
 
 ## What Is New
 
+- v1.9.8-hotfix4 fixes the desktop shell click regression by making only the title area draggable and keeping every button/control in a no-drag interaction layer.
+- v1.9.8-hotfix4 fixes the shell height constraint mismatch that kept the window capped to the old compact height and caused crowding/scroll pressure.
+- v1.9.8-hotfix4 keeps the desktop shell labels ASCII-safe in protected packages so version, status, theme, settings, and account text do not render as mojibake.
 - v1.9.8-hotfix2 removes the long-idle disconnect prompt auto-click path and uses a low-frequency keepalive interaction instead.
 - v1.9.8-hotfix3 cleans up the desktop shell after screenshot/OCR review: top controls, version, account, runtime selector, and status cards are separated and mojibake labels were replaced with readable UTF-8 text.
 - The idle-disconnect keepalive is enabled by default through `idleDisconnectWatch`, runs every 150 minutes, and can still be disabled from the control page.

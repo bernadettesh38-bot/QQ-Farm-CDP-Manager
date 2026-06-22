@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-06-23 - 1.9.8-hotfix4
+
+### Fixed
+
+- Reworked the desktop shell interaction layer so the whole shell is no longer a draggable region; only the title area is draggable and all buttons remain clickable.
+- Fixed the desktop shell window height constraints so the v1.9.8-hotfix3 560px layout is no longer capped to the old 386px height.
+- Rebuilt the desktop shell first viewport with separated title/actions, version/public/account identity, startup controls, and status cards.
+- Switched desktop shell runtime labels to ASCII-safe English to prevent mojibake in protected packages.
+- Added regression checks for clickable desktop controls, visible version badge rendering, and matching window height constraints.
+
 ## 2026-06-22 - 1.9.8-hotfix3
 
 ### Fixed
