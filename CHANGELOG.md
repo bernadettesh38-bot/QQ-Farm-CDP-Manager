@@ -1,5 +1,52 @@
 # Changelog
 
+## 2026-06-22 - 1.9.8
+
+### Added
+
+- Added an idle-disconnect popup watcher for the long-idle prompt that says the farm connection was disconnected and asks the user to log in again.
+- Added persistent `idleDisconnectWatch` configuration and runtime sync for both CDP/WX and QQ host paths.
+- Added release-gate coverage for idle-disconnect watcher exports, config persistence, QQ RPC allow-listing, and web UI settings.
+
+### Fixed
+
+- Improved the desktop shell layout so version, public-benefit status, quick links, theme/settings/window actions, account identity, and status cards no longer compete for the same titlebar space.
+- Preserved all v1.9.8-b LAN mobile token fixes, v1.9.8-hotfix desktop/mobile fixes, and v1.9.8-test friend mischief safety rules in the formal protected release.
+
+## 2026-06-19 - 1.9.8-b
+
+### Fixed
+
+- Fixed LAN mobile-control token access so a tokenized `/mobile.html` URL also carries the token into same-origin static resources, API calls, and WebSocket connections.
+- Allowed enabled LAN mobile control with a valid token to pass access checks even when the client address is reported in an unexpected non-local or IPv6 form.
+- Kept tokenless non-local access rejected and preserved random-token protection.
+
+## 2026-06-18 - 1.9.8-hotfix
+
+### Fixed
+
+- Fixed the desktop shell Settings button after LAN mobile control changes by opening the local settings page through `127.0.0.1` even when the gateway listens on `0.0.0.0`.
+- Reduced desktop shell crowding by increasing the shell height, allowing vertical scrolling, and moving secondary status cards behind a collapsed "More status" section.
+- Changed `/mobile.html` to serve the full web control page with mobile-adaptive CSS and token-aware fetch handling instead of a reduced partial page.
+- Implemented the two-step friend mischief runtime action: click a friend land tile first, wait for the grass or bug component, then click that component before counting the action.
+- Rebuilt `button-lite.js` so protected packages include the friend mischief runtime method.
+- Re-verified light/dark theme persistence through the user settings persistence test.
+
+## 2026-06-18 - 1.9.8-test
+
+### Added
+
+- Added a low-priority `friend_mischief` scheduler task for friend-farm grass and bug actions after entering a friend's farm.
+- Added a shared friend mischief daily ledger stored under stable user data, with grass and bug actions sharing one hard-capped 100-action daily limit.
+- Added friend mischief diagnostics in `friend-mischief-trace.jsonl` with ledger, candidate, enter-farm, action, and counter-result reason codes.
+- Added disabled-by-default LAN mobile control settings with random token protection, mobile config update API, and mobile page entry.
+
+### Changed
+
+- Added friend mischief controls to the web dashboard and kept the task lower priority than own-farm work, normal help, guard-dog help, and friend stealing.
+- LAN mobile access remains local-only unless explicitly enabled; non-local LAN clients must pass token validation when required.
+- Added release-gate tests for friend mischief config, friend mischief ledger persistence, and LAN mobile control safety.
+
 ## 2026-06-18 - 1.9.7-hotfix
 
 ### Fixed

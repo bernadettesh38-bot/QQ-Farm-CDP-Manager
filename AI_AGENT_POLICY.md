@@ -54,3 +54,18 @@ QQ manual-host mode is a persistent user-facing setting, not an env-only
 developer switch, and theme mode must be merged independently from Web
 automation or farm settings. A protected package that overwrites theme mode
 while saving unrelated settings is not release-ready.
+
+Official maintenance for v1.9.8-test must preserve friend mischief and LAN
+mobile-control safety rules: grass and bug actions share one stable user-data
+daily ledger capped at 100 actions, counters are incremented only after real
+action confirmation, and the `friend_mischief` scheduler task stays lower
+priority than core farm/help/steal work. LAN mobile control must remain disabled
+by default, use random token protection for non-local clients when enabled, and
+must not introduce fixed tokens, backdoor accounts, or bypass query parameters.
+
+Official maintenance for v1.9.8 must also preserve the idle-disconnect popup
+watcher and the desktop shell layout cleanup. The watcher detects and logs the
+long-idle disconnected-login prompt by default, and must not silently click the
+prompt unless a future release explicitly adds and verifies that behavior. The
+desktop shell must keep version, account identity, theme/settings actions, and
+status cards readable in separate layout regions.

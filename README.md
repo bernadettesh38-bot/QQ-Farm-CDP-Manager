@@ -4,10 +4,24 @@ QQ Farm CDP Manager is a protected desktop and web control tool for personal stu
 
 This project is permanently free for public-benefit use. Reselling paid copies or paid repackaged versions is not allowed.
 
-Current version: `v1.9.7-hotfix`
+Current version: `v1.9.8`
 
 ## What Is New
 
+- v1.9.8 is the formal protected release that includes the v1.9.8-b LAN token fix, v1.9.8-hotfix desktop/mobile fixes, and v1.9.8-test friend mischief safety work.
+- v1.9.8 adds an idle-disconnect popup watcher for the long-idle prompt that says the farm connection was disconnected and asks the user to log in again.
+- The idle-disconnect watcher is configurable through `idleDisconnectWatch` and only detects/logs the prompt by default; it does not click the prompt automatically.
+- v1.9.8-b fixes LAN mobile token access so the tokenized mobile URL keeps working for page resources, API calls, and WebSocket connections.
+- v1.9.8-hotfix fixes the desktop shell Settings button when LAN mobile control is enabled.
+- The desktop shell layout is less crowded, with secondary status details folded under "More status".
+- The mobile LAN page now serves the full web settings page with mobile-adaptive styling and token-aware requests.
+- Friend mischief now performs the required two-step action: click a friend land tile, then click the grass or bug component that appears.
+- Light/dark theme persistence was rechecked with the user settings persistence test.
+- v1.9.8-test adds a low-priority friend mischief task for grass and bug actions after entering a friend's farm.
+- Friend mischief uses one shared daily limit for grass and bug actions, hard-capped at 100 per day.
+- Friend mischief counters are stored in stable user data so QQ/WX switching, service restart, and package replacement do not reset the same-day count.
+- The dashboard now includes friend mischief controls and LAN mobile-control settings.
+- LAN mobile control is disabled by default. When enabled, non-local LAN access is protected by a random token and config updates reload the scheduler settings.
 - v1.9.7-hotfix makes QQ manual-host mode a persistent user-facing setting in the desktop shell and control page.
 - Users can switch between automatic QQ bootstrap and manual QQ host attach mode without PowerShell environment variables.
 - Manual QQ host mode is saved and restored after restart; advanced environment variables still work as overrides.
