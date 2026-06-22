@@ -2,12 +2,12 @@
   "schemaVersion": 2,
   "product": "QQ-Farm-CDP-Manager",
   "artifactType": "protected",
-  "version": "1.9.8",
-  "buildId": "PUBLIC-20260622-002",
-  "sourceCommit": "7ff82be9dd1283b6352d1beba18407ce0d9d699e",
+  "version": "1.9.8-hotfix",
+  "buildId": "PUBLIC-20260622-003",
+  "sourceCommit": "a7cb55f54ed8e1e688d4f09c275e4b4390d06539",
   "channel": "stable",
   "distribution": "FREE_PUBLIC_BENEFIT",
-  "createdAt": "2026-06-22T08:38:10.278Z",
+  "createdAt": "2026-06-22T08:51:13.966Z",
   "protection": {
     "obfuscatedFileCount": 57,
     "plainFileCount": 130
@@ -26,14 +26,14 @@
       "group": "runtime"
     },
     "AI_AGENT_POLICY.md": {
-      "sha256": "be6ee815a5eda89512d4143d7d6427e0843a294047086f5a70444c2bf42f636e",
-      "size": 3788,
+      "sha256": "880f1c7b8d63218a8e23be492e67bf66a908ac7f2ecf14925bdb21a5366b35eb",
+      "size": 3766,
       "required": true,
       "group": "runtime"
     },
     "CHANGELOG.md": {
-      "sha256": "ad0f49688cfefba2f1d926340d0e73c7aad3c44456a444c38e44b5ce2ac574e1",
-      "size": 10672,
+      "sha256": "3d41cb34a4ea591dbc67b383b2aa0be845e621f9b46a56c8fe3673e367707049",
+      "size": 11220,
       "required": true,
       "group": "runtime"
     },
@@ -50,20 +50,20 @@
       "group": "runtime"
     },
     "README.md": {
-      "sha256": "e78d8dba395ffde19303536a39675a1e4f73ae1419acde02f4a730315c627371",
-      "size": 6415,
+      "sha256": "ec4132c9d95c467f6d2f27da87a69bd1d08059becb0795522d1e3f42fa2e3874",
+      "size": 6555,
       "required": true,
       "group": "runtime"
     },
     "SHA256SUMS": {
-      "sha256": "e3ef71533308fb9de60750f87430db7dc9705e7c85201971e0cc078845b01db0",
+      "sha256": "6394425d4bed8ca0b6fd9a911095128463aff85642f12677865c5c8934844c71",
       "size": 18329,
       "required": true,
       "group": "runtime"
     },
     "VERSION": {
-      "sha256": "0bfe7660dfb040ace92de427845850fdc2c4ee76ec6d279c2895d7a1897913a3",
-      "size": 233,
+      "sha256": "8d2f97d5e5409a901dd283a3ffe1d16d805d68ae43a645c95709f7c5bf151826",
+      "size": 240,
       "required": true,
       "group": "config"
     },
@@ -74,20 +74,20 @@
       "group": "runtime"
     },
     "apply-cli-overrides.cjs": {
-      "sha256": "51692dffc7ff794c6e0e8ad7cc89860dc3cede5882e8f165e26d74f1e9c3a6b1",
-      "size": 8013,
+      "sha256": "6bbd1bbd121daffd051b491ff1238b34996df3abac62886647ec0969ff0b9f7f",
+      "size": 7920,
       "required": true,
       "group": "runtime"
     },
     "button-lite.js": {
-      "sha256": "18ffb0605ebfee8586f000660f64012ede32f680d878dacadb5659c015d16db6",
-      "size": 260874,
+      "sha256": "e50c5ca809f866153d67111ee448b86f05d67b0c41c14790ac1a08c7c8499f26",
+      "size": 262655,
       "required": true,
       "group": "runtime"
     },
     "button.js": {
-      "sha256": "e8270c48a4dd56a9e3d9d606c4ced1211747d0737a8797b8a16a58084d95e832",
-      "size": 622220,
+      "sha256": "b306f9e606d32dbec7295ea454eb5ba6f9655e9f8beb796b167293bc8106f7e2",
+      "size": 625319,
       "required": true,
       "group": "runtime"
     },
@@ -152,32 +152,32 @@
       "group": "desktop"
     },
     "desktop-sample/main.js": {
-      "sha256": "115ee3c6e3287c073ce5c45daad9b4ed60679d79a1c15c268959f6e1b5197096",
-      "size": 31958,
+      "sha256": "4fabf5f27d24d2c7eabdf0d5d3051a1eedd1ab4375e65305ac1f647c0bc768c7",
+      "size": 31072,
       "required": true,
       "group": "desktop"
     },
     "desktop-sample/preload.js": {
-      "sha256": "0922ae64017533deb45034b5988f454089e1ec0c442a8d513e7ad51683f44ed3",
-      "size": 6298,
+      "sha256": "70ca26d00d0777eb1fa365c093c57646df1e1c002520cfaaf77b1c50549531ec",
+      "size": 6190,
       "required": true,
       "group": "desktop"
     },
     "desktop-sample/renderer.js": {
-      "sha256": "e8d1ce34237a9f9b214601e5bb7bc4ff87cb6ae6e86f022a8ce0878874c955b3",
-      "size": 30790,
+      "sha256": "c5f5d3c65017e09b7e2673a2fe17f3abd5655c7a1747fa5f32cdc88f8d0f6856",
+      "size": 30453,
       "required": true,
       "group": "desktop"
     },
     "desktop-sample/service-controller.js": {
-      "sha256": "1241bc5c583a3e8eb925eff859bbe953856c233cff317812fb31680444457d93",
-      "size": 48047,
+      "sha256": "e71e7a960fb432b1824da86bf64dc2963707c608062e5795840765e834b537c4",
+      "size": 48403,
       "required": true,
       "group": "desktop"
     },
     "docs/CURRENT_TASK_STATE.md": {
-      "sha256": "5907cf4b5067b0dc05414b4ce38068e588542a8e463a88dfaf7ea6f56750ccb4",
-      "size": 15426,
+      "sha256": "4aba6e3ae8d2e4dc271a93141f9e109beb42452b3152e1ccabc7a4063317f377",
+      "size": 15878,
       "required": true,
       "group": "runtime"
     },
@@ -224,20 +224,20 @@
       "group": "runtime"
     },
     "load-env.cjs": {
-      "sha256": "b789432400801fabe1e042e9276e2c3af8499b94c63af61bc60c3d5365d3ccf5",
-      "size": 8063,
+      "sha256": "8b3eac99d99bce9641bde9fe0b1c8fe101cbddcd1711140c881ca052e87c3cbf",
+      "size": 7900,
       "required": true,
       "group": "runtime"
     },
     "package-lock.json": {
-      "sha256": "a52b76fea08e512fd3f4b2f9b80bb9afc3c6f95f4d7d8aaf688d5ffb814a65e1",
-      "size": 24581,
+      "sha256": "fbe2371f1e2f63ad350fb6a048c2cf8fe53e7dacb8819f925a9ee1fa4d4dc09b",
+      "size": 24595,
       "required": true,
       "group": "config"
     },
     "package.json": {
-      "sha256": "83f88b4af02449c2d06c57f78354666b8d2500735357ddce7f1737f89b2a2156",
-      "size": 2381,
+      "sha256": "b7aa4621954b570c0030d1a24abbc68f3905131114bd90b9bad3bb580d0bf1c5",
+      "size": 2388,
       "required": true,
       "group": "config"
     },
@@ -308,8 +308,8 @@
       "group": "public-welfare-ui"
     },
     "public/index.html": {
-      "sha256": "6e6f8474b3bf9508dfe416977ddc816dd2a81cee12247d45ab84650884293c20",
-      "size": 668115,
+      "sha256": "14040f48c00848696c31e83608c5c89c8b34c639ad20b78bf4fd83f0411baced",
+      "size": 668111,
       "required": true,
       "group": "public-welfare-ui"
     },
@@ -338,296 +338,296 @@
       "group": "public-welfare-ui"
     },
     "qq-host.js": {
-      "sha256": "f5e43b9fe31c7b92ecc97446ef424b99ad701668006a54fba27e14d8b86f2b5a",
-      "size": 30932,
+      "sha256": "5a8628171aef8ca2bcc4a9ec2e71ed3b2dcecf12db709e8dd7db1702ed0793f1",
+      "size": 31140,
       "required": true,
       "group": "gateway"
     },
     "run.cjs": {
-      "sha256": "ac30334e095b0a970953079d26a23ab9c31bba71321634bf5fc0b368f6b60974",
-      "size": 14464,
+      "sha256": "b3df763d46ddde589544c2556137d43329f00b899fb367655e5106c67bca41eb",
+      "size": 14248,
       "required": true,
       "group": "bootstrap"
     },
     "scripts/patch-qq-miniapp.cjs": {
-      "sha256": "7baeae5581ffe91aed032ab7abd7d6e37fc8f55addfbca2cbbdfca2c2610be99",
-      "size": 11529,
+      "sha256": "05fe31e0fec4c91283bc9595a933158327106762764f0a6fd4937e4ed0a94457",
+      "size": 11756,
       "required": true,
       "group": "runtime"
     },
     "scripts/repair-project.cjs": {
-      "sha256": "41d412977383d1f081666feb1742412b03feb5e0518e76029b4d60bc3ad4fff7",
-      "size": 15381,
+      "sha256": "4257aa6e3d772dae71c8e386d8f528a330d5ab30ea303d26b2ab6319310f7c20",
+      "size": 14933,
       "required": true,
       "group": "runtime"
     },
     "scripts/reward-popup-interceptor.cjs": {
-      "sha256": "0f4fd577a069684a118b317ded5241f721bc37911723732a5828416d2342324e",
-      "size": 26505,
+      "sha256": "491b79535c179366d660e3e92de63347fabdac86ec58d53c51b06b0540d09b33",
+      "size": 26513,
       "required": true,
       "group": "runtime"
     },
     "scripts/start-entry.cjs": {
-      "sha256": "0658dba0a053eae68f8aa24a06bc6fbbbef2bba38462880aa3ec7fdfc846ec87",
-      "size": 17739,
+      "sha256": "713461c7cf005cc30bbd2ae1fb73bfe4d21d0068b38e7d5250eff0b52a4416d5",
+      "size": 18102,
       "required": true,
       "group": "bootstrap"
     },
     "setup.cjs": {
-      "sha256": "7f63a5be5ac2d925e62cbe989e266dbe55f4fa66d76e92155314c1befa2b199f",
-      "size": 28671,
+      "sha256": "873920736e30bfd9e1d705239a7e5d6384f64a9f45eb39bf7b3d567ff480f8b5",
+      "size": 28997,
       "required": true,
       "group": "bootstrap"
     },
     "src/analytics.js": {
-      "sha256": "63425b2c69d5af42c5cc966b153f68362be5506bdda1512598c24ae2c1293a7a",
-      "size": 11329,
+      "sha256": "273b33d76243130b988b936aa7972347f46a7d9a2a148c44941aa0ba21b48f22",
+      "size": 11819,
       "required": true,
       "group": "runtime"
     },
     "src/auto-farm-daily-stats.js": {
-      "sha256": "39fb03576ab3641d13eb880da55ca9ec595dd84e3270c02c64008385aecdf8a0",
-      "size": 15187,
+      "sha256": "d18a0d6823a12215b0323a96df7952d7e55f413fe43459dceeee02bb2582d088",
+      "size": 14880,
       "required": true,
       "group": "runtime"
     },
     "src/auto-farm-executor.js": {
-      "sha256": "801ac193b76742c51d4955fd5fc21f4162bf2c856f9ac28c73cd4e23a5701503",
-      "size": 350157,
+      "sha256": "0353de76f050540d89cc098a1abf0bced4e6dba65af417b6be43f2f59eecb04d",
+      "size": 349273,
       "required": true,
       "group": "runtime"
     },
     "src/auto-farm-manager.js": {
-      "sha256": "35454e41a8e17f0007238a58697af872626bc1a6d141ac9bf0964719d098bdd0",
-      "size": 299073,
+      "sha256": "c4a96b219c09a91840d1ff61a14d613aa5c49f9af4e7d337e769e48edc5f0e52",
+      "size": 299865,
       "required": true,
       "group": "runtime"
     },
     "src/auto-farm-plant-config.js": {
-      "sha256": "0b25c8ab336f6a8ffea9911099abe9dae26731d7ce6eebcd4874a1ce75b39497",
-      "size": 7540,
+      "sha256": "e929060b91336d2a3e38b9c705c697d0a7ecad7325b0a00519100fcf78eccde5",
+      "size": 7465,
       "required": true,
       "group": "runtime"
     },
     "src/background-window-keeper.js": {
-      "sha256": "81d0d7afbf28e07e670acb9062e9b1d7d9d03ef70400273803a2a76654c49443",
-      "size": 17947,
+      "sha256": "759f23adf75151d05c28b5a50b33bf2e007164ef35dbc32a7d73cfcfe1bae5a6",
+      "size": 18017,
       "required": true,
       "group": "runtime"
     },
     "src/backpack-seed-priority.js": {
-      "sha256": "100e7f2fe81a160373af112b7e2446299fea78a30c1ef98edbcc538635825d21",
-      "size": 10706,
+      "sha256": "8606d485959ebf0eebaba11d59b5fb6f3c2f206bd5aeb54003823d4e1ba7bf22",
+      "size": 11013,
       "required": true,
       "group": "runtime"
     },
     "src/cdp-session.js": {
-      "sha256": "92c25336e7efbc1d1764d6ca71c6cec003872bf17bbcc9fa548155963360dec0",
-      "size": 11810,
+      "sha256": "ece30524a82b648cde5369080aa6105d569dc56025661130c1541e19b6d93218",
+      "size": 11639,
       "required": true,
       "group": "runtime"
     },
     "src/cdp-wmpf-session.js": {
-      "sha256": "9ecdae515becf5c9ce88df8e4016f25075c13276269e91036d34cba9080c6237",
-      "size": 36798,
+      "sha256": "fb943a6c4bed3260965049ea42915f2f3e63138ba0cad2de6f3d8ae0952ce292",
+      "size": 37748,
       "required": true,
       "group": "runtime"
     },
     "src/config.js": {
-      "sha256": "41f14d3feb5d7e08c9472bc3239fecb0417a9a19150689a99e2eefe47c0c3cfe",
-      "size": 13889,
+      "sha256": "f4868ad2d5738efb93ac27e377e2f91d9cc87d8d45297844d314c615323fca6f",
+      "size": 14507,
       "required": true,
       "group": "runtime"
     },
     "src/desktop-diagnostics.js": {
-      "sha256": "6ccd4d198deac8dc9e801e98ec82402e9966a4f04598623047e40cc9668c49ef",
-      "size": 11397,
+      "sha256": "f276be61e79ce7d0f70ee2a79474aa80a0943a83860eb495da0369cd6ce39e8a",
+      "size": 11792,
       "required": true,
       "group": "runtime"
     },
     "src/friend-guard-dog-cache.js": {
-      "sha256": "37308ee664afcbf3e0994d2451d0604d40b0063b5b8150918661aee8c4ea783f",
-      "size": 26581,
+      "sha256": "997fca10413ea88b71bcd2267ba6296d3a15bf277afb3ff5a328d9b575efe245",
+      "size": 26649,
       "required": true,
       "group": "runtime"
     },
     "src/friend-help-exp-cache.js": {
-      "sha256": "5e6df5bb4388e82b150b939d8c2963b14e06e18039c214ee6cffa086019bb7f9",
-      "size": 13960,
+      "sha256": "9980d62b1e2226bd9cf3ad8f2a9062c5aafdc81410f8835b35f1ee49a49c4104",
+      "size": 13771,
       "required": true,
       "group": "runtime"
     },
     "src/friend-mischief-ledger.js": {
-      "sha256": "f512770e606dee0e0e050733f4149758d74ef0010f3b484838d512aa499db0c4",
-      "size": 17927,
+      "sha256": "0dc79838cca561db6eff5b6a8907bc26042f320d0667b1966f46421a8c04bf5c",
+      "size": 17397,
       "required": true,
       "group": "runtime"
     },
     "src/game-config.js": {
-      "sha256": "ed6e7cf19853b3a4100ea973607c1f778b6d53941461b761bab4df0fe7413f31",
-      "size": 46884,
+      "sha256": "cf98e177a1f1c7863845349847e205de97c14eb61fea9ceb1a98e8e5276fcfcc",
+      "size": 46104,
       "required": true,
       "group": "runtime"
     },
     "src/game-ctl-utils.js": {
-      "sha256": "29af3106093a4e12edc8dd280e160df164b31152252e00b057ceb7e047151ef8",
-      "size": 28663,
+      "sha256": "98a74662e71725a4a62a4ff15889b4e1769d475162043176643dd73d4173e3c7",
+      "size": 28844,
       "required": true,
       "group": "runtime"
     },
     "src/gateway.js": {
-      "sha256": "2e8ab73941701ecee2ede6dfd1ea98f5cb081457ae497ca48f90d2d4b591fb98",
-      "size": 475388,
+      "sha256": "2b7b3759ec3af56c7ed4ecc6efb93cf02098c3e5b0bf9ff66098cc38512a758c",
+      "size": 478348,
       "required": true,
       "group": "runtime"
     },
     "src/index.js": {
-      "sha256": "91509568046c178208d3b7b16dd59651a289bcf8b51ff61a81c923ff407b36f7",
-      "size": 10879,
+      "sha256": "1a529469536a3e4b055ad690f096089bd0865f7637c1b1d80797b11ba40c6224",
+      "size": 10321,
       "required": true,
       "group": "runtime"
     },
     "src/legacy-config-import.js": {
-      "sha256": "bc0bf51d107ab51cff34373fca36a518f79d0303b2f7f9cb88ff5117c76b83e6",
-      "size": 6204,
+      "sha256": "b3481e05e5b8ee6f7d446a1a9a8ba908508599ee956443293cf7c16193e59b97",
+      "size": 5808,
       "required": true,
       "group": "runtime"
     },
     "src/log-file-mirror.js": {
-      "sha256": "56f801efd4f042f6aecfd513bcebb79a1878832de70b2032edddf8a6986558ac",
-      "size": 6797,
+      "sha256": "3cd915859b6d2f71671061a4dae7e0fd005c557efa6c55e9a03e25e12c75de11",
+      "size": 6922,
       "required": true,
       "group": "runtime"
     },
     "src/message-push-manager.js": {
-      "sha256": "2ced67a74ee83281f9ea57b9229d286a2a2d86ac73db57dbc8b9937071f60897",
-      "size": 122223,
+      "sha256": "e752abd4f494c5b9261fe0da3f79977c65fe1a20ad4bb28c5d09a761323ea93b",
+      "size": 120292,
       "required": true,
       "group": "runtime"
     },
     "src/multi-tile-planting.js": {
-      "sha256": "8556db0c3fa64242ee692e746c62f502ef1651e643cd9ae1f81dc99f9caca396",
-      "size": 10106,
+      "sha256": "0039ee1e5dabed1124d5b9055fb227faa575ea358c988185c1105958751095eb",
+      "size": 10343,
       "required": true,
       "group": "runtime"
     },
     "src/plant-analytics.js": {
-      "sha256": "6637c608126fe5d76664ae9a50a65c620b72c27b520a8571e802e6c737627e8e",
-      "size": 17118,
+      "sha256": "915cb89291b31088572e77196afbf0d8fcfd52f89f9b86c22a78aee424785f2c",
+      "size": 16800,
       "required": true,
       "group": "runtime"
     },
     "src/plant-image-cache.js": {
-      "sha256": "9c8c4def65750452132c022ae4be230b84f265e30fccabc1063dd4c4d553a746",
-      "size": 8879,
+      "sha256": "f5a0ca2f5a46718ecd1403c19895b4849bef6fcbee970c6c7daa1e9956416921",
+      "size": 8960,
       "required": true,
       "group": "runtime"
     },
     "src/player-profile-cache.js": {
-      "sha256": "49a3df75246ab244c69a6ee06df24587128204e18a807219707dcd1cafe4316c",
-      "size": 17246,
+      "sha256": "5f663b523571766af8fea3052077837e55b91ee218460287d865ab72d8c09d82",
+      "size": 16959,
       "required": true,
       "group": "runtime"
     },
     "src/player-profile-resolver.js": {
-      "sha256": "8039a5fb50cf4c9d9db0d25464cd26a7a9fb7789f7c34739cec75bb20a4a0027",
-      "size": 19902,
+      "sha256": "40a7953d80db0531a33477a8e8429866b606c0d184bd28eb042cb9205f7f98d5",
+      "size": 19928,
       "required": true,
       "group": "runtime"
     },
     "src/preview-manager.js": {
-      "sha256": "b51732c6ed233b81cf155f28b78f1e71aaa36e64541c51e7ed0f2ff3b01e34b3",
-      "size": 27676,
+      "sha256": "f55781353af405bad417e08e8e3842f010e79b1dcc3b5e0f397391ab52f9af83",
+      "size": 27353,
       "required": true,
       "group": "runtime"
     },
     "src/process-guard-macos.js": {
-      "sha256": "817d68d9f29d8cc533651cdb54bab55d2050e78bfab0c1785a3b72d285fa0f31",
-      "size": 15211,
+      "sha256": "9ea0922a687676fe6285909a011d029752e7c29c9dfee1c20e7b597e33efa2c4",
+      "size": 14955,
       "required": true,
       "group": "runtime"
     },
     "src/process-guard-windows.js": {
-      "sha256": "e2f3382dcf7834221ae92845758722c879dda7b6bde772b11b3b7b007dbf8ef0",
-      "size": 42311,
+      "sha256": "04ee9291545bb85a61f73121c453e08a16cba96f5e8b738d6607ca89f41ea026",
+      "size": 43085,
       "required": true,
       "group": "runtime"
     },
     "src/process-guard.js": {
-      "sha256": "e71d42c0cf625081f7a78d0aa8e256aeeb527dfbdae458dc014746c18a99a753",
-      "size": 40082,
+      "sha256": "cced2a7f5bc0af7ba02516a000f730e543edc05cc104699c50a810d9cdb38f3d",
+      "size": 40390,
       "required": true,
       "group": "runtime"
     },
     "src/product-brand.js": {
-      "sha256": "334200b6275f1bbff01ad6174ee989adb03b70dc8735e37a04d30f27a6969839",
-      "size": 8319,
+      "sha256": "bc96b2bba813fa308b89a0191151c3d6b6da2133029a8be340adf4ee2a2f8332",
+      "size": 8039,
       "required": true,
       "group": "public-welfare-ui"
     },
     "src/qq-auto-patch.js": {
-      "sha256": "d7721c92b4f21cd72792a2c98c9919311faf9b28fb2e700088d3f5e6c81aa25c",
-      "size": 11571,
+      "sha256": "1d1b593b7bba22ee0b9abb9873fd86fa14cc894e49b50c69ed2f620a51132408",
+      "size": 11782,
       "required": true,
       "group": "gateway"
     },
     "src/qq-bundle.js": {
-      "sha256": "f5eb2b289d31cef39c2ec2c7a25914c836625236426456f89ae67ea14c3772a3",
-      "size": 34856,
+      "sha256": "18e8dd4944caeec3322f7c6d9595f69f05f17caf479a325883018d057c80d51d",
+      "size": 35064,
       "required": true,
       "group": "gateway"
     },
     "src/qq-host-bootstrap.js": {
-      "sha256": "1ef962629736723c4dd77806e85c0b825a651d8fda4e9569145969304be056ec",
-      "size": 43768,
+      "sha256": "7d0ff3a591d49b22632dc522ead725d118c8b853c8bf5d910760e0f81655d0fc",
+      "size": 43795,
       "required": true,
       "group": "gateway"
     },
     "src/qq-miniapp-discovery.js": {
-      "sha256": "7018ade41e6e6cd9100a2378c069ad39dc23444fc461b86050f2319a99d43ded",
-      "size": 25205,
+      "sha256": "74f1bce6f53d983c7bc63ccf595feb73c790ceea59139d1d2c832ae1e7da835a",
+      "size": 25249,
       "required": true,
       "group": "gateway"
     },
     "src/qq-miniapp-image-extractor.js": {
-      "sha256": "fce0b51133b882f1256c9d64643e4ff7a8452496327d097ab04357430552cdda",
-      "size": 16224,
+      "sha256": "6ed794802870b2b551a30ed8c6f8347f83f3d75a1f4a7bed2b936ea23bbe43ad",
+      "size": 15855,
       "required": true,
       "group": "gateway"
     },
     "src/qq-rpc-spec.js": {
-      "sha256": "2b2006d76300d3e23743ecb1bf9db9cb3534721750af11c13d9752b3a39ca613",
-      "size": 8472,
+      "sha256": "6ab8603787542601c011083e359abcbefd7bca4b674a9ca53e285191029a0d4a",
+      "size": 8669,
       "required": true,
       "group": "gateway"
     },
     "src/qq-ws-session.js": {
-      "sha256": "cff78fb466d39766a883a82096cb8372c259937b27ca6c19f6c178c6f088f5d4",
-      "size": 41483,
+      "sha256": "db9c963d7d98f2421c90bb64cb0af293bd4744d430b2f8b1b44d8e95b6912fa6",
+      "size": 41810,
       "required": true,
       "group": "gateway"
     },
     "src/release-integrity.js": {
-      "sha256": "866d95e079627a5934c1279f06d5caaac049cd0182918e0487ba8612d03225d3",
-      "size": 27780,
+      "sha256": "c2eb443507e515fe7d1f93879ec095182a807490b29fc2a0daab85f6f71a5a4b",
+      "size": 28057,
       "required": true,
       "group": "runtime"
     },
     "src/steal-crop-blacklist-options.js": {
-      "sha256": "f3119877cb36d1f59ac6d475cde793de0faca9dd1855aeed3dc391735308a899",
-      "size": 13855,
+      "sha256": "697669c7e2c13bce107526d221e36ec2871ab1b7bfb1a0838aeb5e45f5766a62",
+      "size": 13793,
       "required": true,
       "group": "runtime"
     },
     "src/task-event-log-store.js": {
-      "sha256": "574068bade02739c2e29ebe9295a243d287a43fdb94239a2ee6ff0b3567507e3",
-      "size": 14236,
+      "sha256": "423fe406a9b6879324846b05800f2bf253e6e58e8ccec5efea2005ca45477d49",
+      "size": 13874,
       "required": true,
       "group": "runtime"
     },
     "src/wx-cdp-status.js": {
-      "sha256": "6cbb2fa67c3c3e0eb5807feaf1b778aa2b4a42af2b2a61237be80272c1df2ca7",
-      "size": 7859,
+      "sha256": "a0bdefe71a8336fd71d8fdc5ec8b6999a5308bb70ee28ac0be2198bc9ad09069",
+      "size": 8264,
       "required": true,
       "group": "runtime"
     },

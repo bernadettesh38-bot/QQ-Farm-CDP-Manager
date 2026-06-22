@@ -63,9 +63,9 @@ priority than core farm/help/steal work. LAN mobile control must remain disabled
 by default, use random token protection for non-local clients when enabled, and
 must not introduce fixed tokens, backdoor accounts, or bypass query parameters.
 
-Official maintenance for v1.9.8 must also preserve the idle-disconnect popup
-watcher and the desktop shell layout cleanup. The watcher detects and logs the
-long-idle disconnected-login prompt by default, and must not silently click the
-prompt unless a future release explicitly adds and verifies that behavior. The
-desktop shell must keep version, account identity, theme/settings actions, and
-status cards readable in separate layout regions.
+Official maintenance for v1.9.8-hotfix must also preserve the idle-disconnect
+popup handler and the desktop shell layout cleanup. The handler detects the
+long-idle disconnected-login prompt and automatically clicks its confirm button,
+matching the existing other-place login reconnect behavior. The desktop shell
+must keep version, account identity, theme/settings actions, and status cards
+readable in separate layout regions.

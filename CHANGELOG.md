@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-06-22 - 1.9.8-hotfix
+
+### Fixed
+
+- Changed the long-idle disconnect popup watcher into an automatic handler.
+- The runtime now detects the prompt that says the farm connection was disconnected after long inactivity and automatically clicks the confirm button, matching the existing other-place login reconnect behavior.
+- `idleDisconnectWatch` is now enabled by default and can still be disabled from the control page.
+- Added release-gate checks for the explicit `gameCtl.clickIdleDisconnectPrompt` runtime method and QQ RPC allow-list entry.
+
 ## 2026-06-22 - 1.9.8
 
 ### Added

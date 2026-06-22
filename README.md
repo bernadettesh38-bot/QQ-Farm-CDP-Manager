@@ -4,13 +4,14 @@ QQ Farm CDP Manager is a protected desktop and web control tool for personal stu
 
 This project is permanently free for public-benefit use. Reselling paid copies or paid repackaged versions is not allowed.
 
-Current version: `v1.9.8`
+Current version: `v1.9.8-hotfix`
 
 ## What Is New
 
+- v1.9.8-hotfix automatically clicks the long-idle disconnect popup confirm button after detecting the prompt, matching the existing other-place login reconnect behavior.
+- The idle-disconnect handler is enabled by default through `idleDisconnectWatch` and can still be disabled from the control page.
 - v1.9.8 is the formal protected release that includes the v1.9.8-b LAN token fix, v1.9.8-hotfix desktop/mobile fixes, and v1.9.8-test friend mischief safety work.
 - v1.9.8 adds an idle-disconnect popup watcher for the long-idle prompt that says the farm connection was disconnected and asks the user to log in again.
-- The idle-disconnect watcher is configurable through `idleDisconnectWatch` and only detects/logs the prompt by default; it does not click the prompt automatically.
 - v1.9.8-b fixes LAN mobile token access so the tokenized mobile URL keeps working for page resources, API calls, and WebSocket connections.
 - v1.9.8-hotfix fixes the desktop shell Settings button when LAN mobile control is enabled.
 - The desktop shell layout is less crowded, with secondary status details folded under "More status".
