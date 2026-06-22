@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-06-22 - 1.9.8-hotfix3
+
+### Fixed
+
+- Reworked the desktop shell layout after screenshot/OCR review: title, quick links, window controls, version, public-benefit badge, account identity, runtime selector, and status cards now have separate scan-friendly regions.
+- Replaced mojibake text in the desktop shell first viewport and renderer status updates with clean UTF-8 Chinese labels.
+- Changed desktop status cards to a two-column compact layout with bounded text so version, theme, account, service status, and task status no longer overlap.
+
 ## 2026-06-22 - 1.9.8-hotfix2
 
 ### Fixed
