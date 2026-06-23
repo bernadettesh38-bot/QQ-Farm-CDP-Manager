@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-06-23 - 2.0
+
+### Changed
+
+- Replaced the v1.9.9 in-game idle keepalive with a service-side scheduled game-window relaunch every 90 minutes.
+- The scheduled relaunch closes or kills the old miniapp window first, then reopens the game window.
+- WeChat scheduled relaunch uses the desktop `QQ经典农场` shortcut first, with the old protocol/command path only as fallback.
+- QQ scheduled relaunch uses the existing QQ miniapp restart route and is independent from the user-facing QQ manual/auto host-mode setting.
+- Desktop WeChat launch now starts the local service first, waits until the service has entered the miniapp debug-bridge/context waiting state, and only then opens the desktop shortcut.
+- Protected builds no longer enable base64 string-array decoding or self-defending dynamic execution helpers in the obfuscator profile, and the release gate rejects protected JS files that expose callable decode or dynamic JS execution helpers.
+
 ## 2026-06-23 - 1.9.9
 
 ### Fixed

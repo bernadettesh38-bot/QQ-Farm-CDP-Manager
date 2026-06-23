@@ -4,12 +4,16 @@ QQ Farm CDP Manager is a protected desktop and web control tool for personal stu
 
 This project is permanently free for public-benefit use. Reselling paid copies or paid repackaged versions is not allowed.
 
-Current version: `v1.9.9`
+Current version: `v2.0`
 
 ## What Is New
 
+- v2.0 replaces the old in-game idle keepalive with a 90-minute scheduled game-window relaunch: the old miniapp window is closed/killed first, then the game is opened again.
+- v2.0 delays desktop WeChat shortcut launch until after the local service is running and waiting for the miniapp debug bridge/context.
+- v2.0 keeps QQ scheduled relaunch independent from the QQ manual/auto host-mode setting.
+- v2.0 hardens protected builds by avoiding reusable base64 decode/dynamic execution helpers in obfuscated public JavaScript and by adding release-gate checks for those patterns.
 - v1.9.9 fixes Web dashboard light/dark persistence so saving config, starting automation, and partial refreshes no longer overwrite the current theme with stale dark state.
-- v1.9.9 upgrades idle keepalive to a real warehouse open/close interaction before falling back to the old lightweight click.
+- v1.9.9 upgraded idle keepalive to a real warehouse open/close interaction; v2.0 removes that in-game keepalive path and uses scheduled window relaunch instead.
 - v1.9.9 improves desktop shell runtime connection diagnostics and isolates Electron shell cache under `data/desktop-shell-user-data`.
 - v1.9.9 lets desktop WX startup start the local service first, wait for health readiness, then try the `QQ经典农场` desktop shortcut before falling back to the existing manual-open wait flow.
 - v1.9.8-hotfix4 fixes the desktop shell click regression by making only the title area draggable and keeping every button/control in a no-drag interaction layer.
@@ -17,7 +21,7 @@ Current version: `v1.9.9`
 - v1.9.8-hotfix4 keeps the desktop shell labels ASCII-safe in protected packages so version, status, theme, settings, and account text do not render as mojibake.
 - v1.9.8-hotfix2 removes the long-idle disconnect prompt auto-click path and uses a low-frequency keepalive interaction instead.
 - v1.9.8-hotfix3 cleans up the desktop shell after screenshot/OCR review: top controls, version, account, runtime selector, and status cards are separated and mojibake labels were replaced with readable UTF-8 text.
-- The idle-disconnect keepalive is enabled by default through `idleDisconnectWatch`, runs every 150 minutes, and can still be disabled from the control page.
+- The idle-disconnect prevention switch is enabled by default through `idleDisconnectWatch`, now runs the 90-minute scheduled window relaunch, and can still be disabled from the control page.
 - v1.9.8 is the formal protected release that includes the v1.9.8-b LAN token fix, v1.9.8-hotfix desktop/mobile fixes, and v1.9.8-test friend mischief safety work.
 - v1.9.8 adds an idle-disconnect popup watcher for the long-idle prompt that says the farm connection was disconnected and asks the user to log in again.
 - v1.9.8-b fixes LAN mobile token access so the tokenized mobile URL keeps working for page resources, API calls, and WebSocket connections.

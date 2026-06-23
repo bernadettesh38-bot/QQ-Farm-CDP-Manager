@@ -63,10 +63,10 @@ priority than core farm/help/steal work. LAN mobile control must remain disabled
 by default, use random token protection for non-local clients when enabled, and
 must not introduce fixed tokens, backdoor accounts, or bypass query parameters.
 
-Official maintenance for v1.9.8-hotfix2 must preserve the idle-disconnect
-keepalive and the desktop shell layout cleanup. The keepalive sends a
-manual-style runtime interaction every 150 minutes to prevent long-idle
-disconnects. It must not automatically click the disconnected-login prompt
-after the prompt is already visible. The desktop shell must keep version,
-account identity, theme/settings actions, and status cards readable in separate
-layout regions.
+Official maintenance for v2.0 and later must not use in-game warehouse
+open/close keepalive or lightweight click interactions for long-idle
+prevention. Use the service-side scheduled game-window relaunch path instead:
+close or kill the old miniapp window, then reopen it every 90 minutes. It must
+not automatically click the disconnected-login prompt after the prompt is
+already visible. The desktop shell must keep version, account identity,
+theme/settings actions, and status cards readable in separate layout regions.
