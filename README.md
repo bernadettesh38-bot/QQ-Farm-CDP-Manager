@@ -4,10 +4,14 @@ QQ Farm CDP Manager is a protected desktop and web control tool for personal stu
 
 This project is permanently free for public-benefit use. Reselling paid copies or paid repackaged versions is not allowed.
 
-Current version: `v1.9.8-hotfix4`
+Current version: `v1.9.9`
 
 ## What Is New
 
+- v1.9.9 fixes Web dashboard light/dark persistence so saving config, starting automation, and partial refreshes no longer overwrite the current theme with stale dark state.
+- v1.9.9 upgrades idle keepalive to a real warehouse open/close interaction before falling back to the old lightweight click.
+- v1.9.9 improves desktop shell runtime connection diagnostics and isolates Electron shell cache under `data/desktop-shell-user-data`.
+- v1.9.9 lets desktop WX startup start the local service first, wait for health readiness, then try the `QQ经典农场` desktop shortcut before falling back to the existing manual-open wait flow.
 - v1.9.8-hotfix4 fixes the desktop shell click regression by making only the title area draggable and keeping every button/control in a no-drag interaction layer.
 - v1.9.8-hotfix4 fixes the shell height constraint mismatch that kept the window capped to the old compact height and caused crowding/scroll pressure.
 - v1.9.8-hotfix4 keeps the desktop shell labels ASCII-safe in protected packages so version, status, theme, settings, and account text do not render as mojibake.
@@ -64,7 +68,7 @@ Current version: `v1.9.8-hotfix4`
 5. Open the matching QQ Farm page and wait for the dashboard to report a ready context.
 6. Start auto farm or run individual tasks as needed.
 
-WeChat mode currently expects the user to open the WeChat QQ Farm page manually. Automatic discovery and automatic opening of the WeChat host may be improved in later versions.
+In the desktop shell, WeChat mode starts the local service first and then tries the desktop `QQ经典农场` shortcut. If the shortcut is missing or the miniapp does not open, keep the service running and open the farm page manually.
 
 ## Public Release Policy
 

@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-06-23 - 1.9.9
+
+### Fixed
+
+- Fixed Web dashboard theme persistence so the current light/dark selection is preserved when saving farm config, starting automation, or refreshing partial config state.
+- Upgraded idle-disconnect keepalive from a lightweight click to a real warehouse open/wait/close interaction, with the old click path retained only as fallback diagnostics.
+- Improved desktop shell runtime stability by moving Electron user data/cache into `data/desktop-shell-user-data`, adding renderer failure diagnostics, and keeping bridge failures explicit instead of silently leaving a static shell.
+- Added desktop WX startup support that starts the local service first, waits for health readiness, then launches the desktop `QQ经典农场` shortcut before falling back to the existing manual CDP wait flow.
+- Added regression checks for theme precedence, warehouse keepalive, desktop bridge diagnostics, and WX shortcut startup.
+
 ## 2026-06-23 - 1.9.8-hotfix4
 
 ### Fixed
