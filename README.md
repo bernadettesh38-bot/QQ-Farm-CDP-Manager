@@ -4,10 +4,16 @@ QQ Farm CDP Manager is a protected desktop and web control tool for personal stu
 
 This project is permanently free for public-benefit use. Reselling paid copies or paid repackaged versions is not allowed.
 
-Current version: `v2.0`
+Current version: `v2.1`
 
 ## What Is New
 
+- v2.1 adds an immediate dashboard debug action for the 90-minute scheduled game-window relaunch. The action kills/closes only the current miniapp window and relaunches the game; it does not restart the local service.
+- v2.1 verifies runtime readiness after each scheduled QQ/WX relaunch. If QQ `gameCtl` or WeChat `cdp.contextReady` is not restored, the service keeps running and schedules a short recovery retry instead of silently waiting for the next 90-minute cycle.
+- v2.1 improves desktop WeChat startup recovery: after the service is running and waiting for the miniapp debug bridge/context, the shortcut is launched, context readiness is checked, and one old-window kill plus relaunch retry runs automatically if the first launch still times out.
+- v2.1 hands unresolved desktop WeChat context timeouts to the gateway background recovery loop, so startup recovery continues after the desktop shell returns.
+- v2.1 keeps QQ scheduled relaunch independent from QQ manual/auto host mode. QQ uses the existing automatic miniapp relaunch path, while WeChat uses the desktop QQ Classic Farm shortcut-first path.
+- v2.1 repairs legacy corrupted QQ Classic Farm window-title settings such as `QQ??????` during process-guard normalization so old windows can be closed before relaunch.
 - v2.0 replaces the old in-game idle keepalive with a 90-minute scheduled game-window relaunch: the old miniapp window is closed/killed first, then the game is opened again.
 - v2.0 delays desktop WeChat shortcut launch until after the local service is running and waiting for the miniapp debug bridge/context.
 - v2.0 keeps QQ scheduled relaunch independent from the QQ manual/auto host-mode setting.

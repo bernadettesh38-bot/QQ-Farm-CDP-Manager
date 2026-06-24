@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026-06-24 - 2.1
+
+### Fixed
+
+- Added a dashboard debug action for the scheduled game-window relaunch path. It invokes the same window-only relaunch executor used by the 90-minute timer and does not restart the local service.
+- The scheduled relaunch now verifies runtime readiness after every QQ/WX relaunch. If QQ `gameCtl` or WeChat `cdp.contextReady` is not restored, it schedules a short recovery retry instead of waiting for the next 90-minute cycle.
+- Improved desktop WeChat startup recovery: after the service reaches the miniapp debug-bridge/context waiting state, the desktop shortcut is launched, context readiness is checked, and one automatic old-window kill plus relaunch retry is performed if the first launch still times out.
+- If desktop WeChat startup still cannot reach context readiness after its immediate retry, it now hands off to the gateway background recovery loop so the local service continues relaunching the game window until the runtime is ready.
+- Kept WeChat relaunch on the desktop QQ Classic Farm shortcut-first path, with protocol/command fallback only after shortcut launch is unavailable or fails.
+- Normalized legacy corrupted QQ Classic Farm window-title settings such as `QQ??????` back to the correct title so old miniapp windows can be found and closed before relaunch.
+- Extended regression coverage for the new scheduled relaunch API/UI route and the WeChat service-start -> bridge-wait -> shortcut-launch -> context-ready/relaunch sequence.
+
 ## 2026-06-23 - 2.0
 
 ### Changed

@@ -70,3 +70,14 @@ close or kill the old miniapp window, then reopen it every 90 minutes. It must
 not automatically click the disconnected-login prompt after the prompt is
 already visible. The desktop shell must keep version, account identity,
 theme/settings actions, and status cards readable in separate layout regions.
+
+Official maintenance for v2.1 and later must keep scheduled game-window
+relaunch as a window-only recovery path. The timer and any manual debug action
+may close/kill and reopen the miniapp window, but must not stop or restart the
+local service process. Desktop WeChat startup must start the service first,
+wait for the miniapp debug-bridge/context waiting state, launch the shortcut,
+then retry one window-only relaunch if context readiness still times out.
+The relaunch path must verify runtime readiness after reopening: QQ requires
+the host and `gameCtl` to be ready, while WeChat requires `cdp.contextReady`.
+If readiness is not restored, the service must continue running and schedule a
+short recovery retry instead of treating the relaunch as successful.
