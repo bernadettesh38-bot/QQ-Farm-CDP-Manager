@@ -4,10 +4,13 @@ QQ Farm CDP Manager is a protected desktop and web control tool for personal stu
 
 This project is permanently free for public-benefit use. Reselling paid copies or paid repackaged versions is not allowed.
 
-Current version: `v2.3`
+Current version: `v2.3hotfix`
 
 ## What Is New
 
+- v2.3hotfix adapts WeChat WMPF20005 as the priority runtime and keeps WMPF20001 compatibility. When local Frida address JSON is missing, the WMPF bridge can use embedded 20001/20005 address overrides without modifying `wmpf/frida/`.
+- v2.3hotfix strengthens protected packages: core source modules are moved under hash-named `runtime/p*.js` files, `src/`, `scripts/`, debug screenshots, source maps, and bulk WMPF address JSON files are excluded from protected output.
+- v2.3hotfix updates protected integrity checks so protected runtime verification uses the signed manifest's runtime bundle list instead of hardcoded `src/` paths.
 - v2.3 hardens the WeChat SouYiSou auto-launch path after customer video review: the SouYiSou window is promoted to the top overlay, confirmed as foreground, and its own search input is located before any farm keyword is written.
 - v2.3 writes the WeChat SouYiSou keyword through the search input control when possible and blocks fallback key sending if the search window or input cannot be proven safe.
 - v2.3 no longer falls back to typing in the WeChat main window after a SouYiSou window is found but cannot be brought to the top overlay.

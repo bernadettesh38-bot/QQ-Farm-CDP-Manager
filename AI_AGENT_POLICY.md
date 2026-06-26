@@ -93,6 +93,13 @@ candidates even when the current friend-list cache missed the gid. The Guard
 Dog auto-import setting must be persistent and user-facing; when disabled,
 Guard Dog scans must not mutate friend whitelist rules.
 
+Official maintenance for v2.3hotfix and later must keep WMPF20005 as the
+priority WeChat runtime target while preserving WMPF20001 compatibility.
+Protected packages must not expose `src/`, `scripts/`, build/signing tooling,
+private keys, source maps, debug screenshots, or bulk WMPF address JSON files.
+Protected integrity must verify manifest-declared runtime bundle files rather
+than hardcoded source paths.
+
 Official maintenance for v2.3 and later must keep WeChat SouYiSou launch
 typing guarded by foreground-window and input-control verification. After the
 side SouYiSou entry is clicked, the WeChat main window must be demoted from

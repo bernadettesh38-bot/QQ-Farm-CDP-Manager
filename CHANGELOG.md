@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-06-27 - 2.3hotfix
+
+### Fixed
+
+- Added WMPF20005 runtime adaptation as the priority WeChat target while keeping WMPF20001 compatibility.
+- Added embedded WMPF20001/WMPF20005 address overrides in the WMPF source adapter layer so the bridge can load when local Frida address JSON is unavailable, without modifying `wmpf/frida/`.
+- Expanded WMPF build discovery to parse `RadiumWMPF/<build>`, `WMPF20005`, `WMPF 20005`, and `--wmpf-build=20005` forms.
+- Hardened protected release structure: protected packages no longer include `src/`, `scripts/`, `docs/`, `wmpf/screenshots/`, or bulk `wmpf/frida/config/` address JSON.
+- Moved protected core modules into hash-named `runtime/p*.js` files and updated protected integrity verification to use manifest-declared runtime core files.
+
 ## 2026-06-26 - 2.3
 
 ### Fixed
