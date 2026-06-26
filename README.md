@@ -4,10 +4,14 @@ QQ Farm CDP Manager is a protected desktop and web control tool for personal stu
 
 This project is permanently free for public-benefit use. Reselling paid copies or paid repackaged versions is not allowed.
 
-Current version: `v2.1`
+Current version: `v2.2`
 
 ## What Is New
 
+- v2.2 hardens friend stealing when crop blacklists are enabled: unknown crop identity no longer falls back to one-click harvest, and unsafe cases are logged as `blacklist_safety_unknown_crop`.
+- v2.2 adds runtime unknown-crop hot update. Newly discovered mature crop components are cached, shown in steal crop blacklist options, and stolen once by targeted land ID only when the new plant is not blacklisted.
+- v2.2 improves mature-friend patrol handling by creating a temporary burst candidate from mature-status events even if the current friend-list cache missed that gid.
+- v2.2 adds a Guard Dog scan option that can automatically import active guard-dog friends into the Web friend-help whitelist after scanning.
 - v2.1 adds an immediate dashboard debug action for the 90-minute scheduled game-window relaunch. The action kills/closes only the current miniapp window and relaunches the game; it does not restart the local service.
 - v2.1 verifies runtime readiness after each scheduled QQ/WX relaunch. If QQ `gameCtl` or WeChat `cdp.contextReady` is not restored, the service keeps running and schedules a short recovery retry instead of silently waiting for the next 90-minute cycle.
 - v2.1 improves desktop WeChat startup recovery: after the service is running and waiting for the miniapp debug bridge/context, the shortcut is launched, context readiness is checked, and one old-window kill plus relaunch retry runs automatically if the first launch still times out.

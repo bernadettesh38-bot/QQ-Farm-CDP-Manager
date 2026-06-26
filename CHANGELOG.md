@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-06-26 - 2.2
+
+### Fixed
+
+- Hardened friend stealing with crop blacklists: if a mature friend crop cannot be proven safe from detailed grid identity, the executor no longer uses one-click harvest and records `blacklist_safety_unknown_crop`.
+- Added runtime unknown-crop component hot update. Newly discovered mature actionable crop components are cached, exposed in the steal crop blacklist options as `runtime_unknown_crop`, and targeted once when their plant ID and land ID are known and the plant is not blacklisted.
+- Improved mature-friend patrol recovery. Friend-status mature events now create temporary burst candidates even when the current friend-list cache does not contain that gid, so stale list reads do not starve a mature friend.
+- Added a Guard Dog auto-import setting. When enabled, completed guard-dog scans merge active strong confirmed guard-dog friends into the Web friend-help whitelist and enable the help scope; when disabled, the existing guard-dog reward/help route is unchanged.
+- Added regression coverage for unknown crop hot update, blacklist safety skip, burst-gid patrol inclusion, Guard Dog auto-import persistence, and Guard Dog UI wiring.
+
 ## 2026-06-24 - 2.1
 
 ### Fixed

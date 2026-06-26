@@ -81,3 +81,14 @@ The relaunch path must verify runtime readiness after reopening: QQ requires
 the host and `gameCtl` to be ready, while WeChat requires `cdp.contextReady`.
 If readiness is not restored, the service must continue running and schedule a
 short recovery retry instead of treating the relaunch as successful.
+
+Official maintenance for v2.2 and later must preserve friend-steal blacklist
+safety and Guard Dog import behavior. With crop blacklists enabled, one-click
+harvest must be blocked when detailed runtime data cannot prove the mature crop
+is safe. Unknown/new crop components must be recorded in stable user data and
+surfaced as runtime-discovered blacklist options; targeted stealing is allowed
+only when the new crop has a known plant ID and land ID and is not blacklisted.
+Mature friend-status events must be able to create temporary burst patrol
+candidates even when the current friend-list cache missed the gid. The Guard
+Dog auto-import setting must be persistent and user-facing; when disabled,
+Guard Dog scans must not mutate friend whitelist rules.
