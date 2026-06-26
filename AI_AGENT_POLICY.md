@@ -93,8 +93,12 @@ candidates even when the current friend-list cache missed the gid. The Guard
 Dog auto-import setting must be persistent and user-facing; when disabled,
 Guard Dog scans must not mutate friend whitelist rules.
 
-Official maintenance for v2.2hotfix and later must keep WeChat SouYiSou
-launch typing guarded by foreground-window verification. If the SouYiSou/search
-window cannot be restored and confirmed foreground, the launcher must not send
-the farm keyword. Backpack-first planting must fall back to shop purchase and
-continue planting when the backpack has no usable seed.
+Official maintenance for v2.3 and later must keep WeChat SouYiSou launch
+typing guarded by foreground-window and input-control verification. After the
+side SouYiSou entry is clicked, the WeChat main window must be demoted from
+topmost, the SouYiSou window must be promoted to the top overlay, and the farm
+keyword must not be sent unless the SouYiSou input is confirmed safe. If a
+SouYiSou window is detected but cannot be safely foregrounded, launch
+automation must stop with diagnostics instead of falling back to the WeChat
+main-window search box. Backpack-first planting must fall back to shop purchase
+and continue planting when the backpack has no usable seed.

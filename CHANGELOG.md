@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-06-26 - 2.3
+
+### Fixed
+
+- Hardened the WeChat SouYiSou launch path after customer video review. After clicking the side SouYiSou entry, the WeChat main window is demoted from topmost, the SouYiSou window is promoted to the top overlay, and foreground confirmation is required before continuing.
+- The farm search keyword is now written through the SouYiSou input control when UI Automation exposes it. Clipboard key fallback is allowed only after the SouYiSou window and input are confirmed safe.
+- If a SouYiSou window is detected but cannot be brought to the top overlay, the launcher stops with a safe diagnostic instead of falling back to typing in the WeChat main window.
+- Carried forward the backpack-first planting fix: empty backpack now falls back to the shop path, buys the highest-level available seed, and continues planting.
+
 ## 2026-06-26 - 2.2hotfix
 
 ### Fixed

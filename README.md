@@ -4,13 +4,14 @@ QQ Farm CDP Manager is a protected desktop and web control tool for personal stu
 
 This project is permanently free for public-benefit use. Reselling paid copies or paid repackaged versions is not allowed.
 
-Current version: `v2.2hotfix`
+Current version: `v2.3`
 
 ## What Is New
 
-- v2.2hotfix protects the WeChat SouYiSou auto-launch path by restoring and foregrounding the search window before typing, so the farm keyword is not sent to a friend chat.
-- v2.2hotfix restores/repositions the WeChat main window before clicking the side SouYiSou entry when the entry is off-screen or occluded.
-- v2.2hotfix fixes backpack-first planting when the backpack is empty by switching to the shop path, buying the highest-level available seed, and continuing planting.
+- v2.3 hardens the WeChat SouYiSou auto-launch path after customer video review: the SouYiSou window is promoted to the top overlay, confirmed as foreground, and its own search input is located before any farm keyword is written.
+- v2.3 writes the WeChat SouYiSou keyword through the search input control when possible and blocks fallback key sending if the search window or input cannot be proven safe.
+- v2.3 no longer falls back to typing in the WeChat main window after a SouYiSou window is found but cannot be brought to the top overlay.
+- v2.3 fixes backpack-first planting when the backpack is empty by switching to the shop path, buying the highest-level available seed, and continuing planting.
 - v2.2 hardens friend stealing when crop blacklists are enabled: unknown crop identity no longer falls back to one-click harvest, and unsafe cases are logged as `blacklist_safety_unknown_crop`.
 - v2.2 adds runtime unknown-crop hot update. Newly discovered mature crop components are cached, shown in steal crop blacklist options, and stolen once by targeted land ID only when the new plant is not blacklisted.
 - v2.2 improves mature-friend patrol handling by creating a temporary burst candidate from mature-status events even if the current friend-list cache missed that gid.
