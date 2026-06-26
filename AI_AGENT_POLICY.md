@@ -92,3 +92,9 @@ Mature friend-status events must be able to create temporary burst patrol
 candidates even when the current friend-list cache missed the gid. The Guard
 Dog auto-import setting must be persistent and user-facing; when disabled,
 Guard Dog scans must not mutate friend whitelist rules.
+
+Official maintenance for v2.2hotfix and later must keep WeChat SouYiSou
+launch typing guarded by foreground-window verification. If the SouYiSou/search
+window cannot be restored and confirmed foreground, the launcher must not send
+the farm keyword. Backpack-first planting must fall back to shop purchase and
+continue planting when the backpack has no usable seed.

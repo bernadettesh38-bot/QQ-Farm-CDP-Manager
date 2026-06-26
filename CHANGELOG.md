@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-06-26 - 2.2hotfix
+
+### Fixed
+
+- Hardened the WeChat SouYiSou launch path so the farm search keyword is only typed after the SouYiSou/search window is restored, foregrounded, and verified. This prevents `QQ经典农场` from being sent into a friend chat when focus is wrong.
+- Restores/repositions the WeChat main window before clicking the side SouYiSou entry when the entry is off-screen or the window is outside the visible desktop.
+- Fixed runtime backpack-first planting. When the backpack has no seeds, the runtime now opens the shop, selects the highest-level available seed, buys the needed count, and continues planting instead of stopping at `no_seeds_in_backpack`.
+- Added regression coverage for WeChat foreground typing guards, off-screen WeChat restore, and backpack-empty shop fallback.
+
 ## 2026-06-26 - 2.2
 
 ### Fixed
