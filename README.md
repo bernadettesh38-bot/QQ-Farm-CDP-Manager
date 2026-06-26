@@ -4,10 +4,12 @@ QQ Farm CDP Manager is a protected desktop and web control tool for personal stu
 
 This project is permanently free for public-benefit use. Reselling paid copies or paid repackaged versions is not allowed.
 
-Current version: `v2.3hotfix`
+Current version: `v2.3.2`
 
 ## What Is New
 
+- v2.3.2 adds WMPF20001/WMPF20005 Frida address JSON in the runtime config and keeps the embedded adapter fallback for protected/runtime paths where bulk Frida config is intentionally excluded.
+- v2.3.2 hardens the WeChat SouYiSou auto-launch path across window positions and screen layouts: the launcher keeps the search window foreground/top overlay, uses UI Automation to locate the mini-game tab and QQ Classic Farm result, and only falls back to proportional coordinates when UI Automation cannot expose the element.
 - v2.3hotfix adapts WeChat WMPF20005 as the priority runtime and keeps WMPF20001 compatibility. When local Frida address JSON is missing, the WMPF bridge can use embedded 20001/20005 address overrides without modifying `wmpf/frida/`.
 - v2.3hotfix strengthens protected packages: core source modules are moved under hash-named `runtime/p*.js` files, `src/`, `scripts/`, debug screenshots, source maps, and bulk WMPF address JSON files are excluded from protected output.
 - v2.3hotfix updates protected integrity checks so protected runtime verification uses the signed manifest's runtime bundle list instead of hardcoded `src/` paths.

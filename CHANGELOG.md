@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-06-27 - 2.3.2
+
+### Fixed
+
+- Added WMPF20001 and WMPF20005 Frida address JSON to the source runtime config, while retaining the embedded WMPF adapter fallback for protected builds that exclude bulk Frida address config.
+- Hardened WeChat SouYiSou startup across window positions and display layouts. The launcher now keeps the SouYiSou window foreground/top overlay, locates the mini-game tab and QQ Classic Farm result through UI Automation, and uses proportional coordinate fallback only when UI Automation cannot expose the element.
+- Added regression coverage for WMPF20001/WMPF20005 Frida address files and UIAutomation-first WeChat search result selection.
+
 ## 2026-06-27 - 2.3hotfix
 
 ### Fixed

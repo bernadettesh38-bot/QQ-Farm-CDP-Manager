@@ -95,6 +95,9 @@ Guard Dog scans must not mutate friend whitelist rules.
 
 Official maintenance for v2.3hotfix and later must keep WMPF20005 as the
 priority WeChat runtime target while preserving WMPF20001 compatibility.
+Official v2.3.2 maintenance may add/update the WMPF20001/WMPF20005 Frida
+address JSON files for runtime compatibility, but must not change WMPF patch
+scene behavior, `wmpf/frida/hook.js`, or `ExtraPatchSceneNumbers`.
 Protected packages must not expose `src/`, `scripts/`, build/signing tooling,
 private keys, source maps, debug screenshots, or bulk WMPF address JSON files.
 Protected integrity must verify manifest-declared runtime bundle files rather
