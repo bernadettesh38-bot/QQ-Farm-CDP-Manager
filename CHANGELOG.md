@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-06-27 - 2.3.3
+
+### Fixed
+
+- Locked WeChat SouYiSou relaunch to the confirmed `WeChatAppEx` search-window handle. The launcher now tracks existing search windows, prefers a newly opened search hwnd, and keeps subsequent query submission bound to that same hwnd.
+- Disabled WeChat main-window search fallback and coordinate-only SouYiSou entry fallback, preventing `QQ经典农场` from being typed into the WeChat chat window or recent-chat search when SouYiSou is not confirmed.
+- Blocked dirty SouYiSou surfaces such as video/video-account and harvest-reminder result pages before any farm result click.
+- Required UI Automation confirmation of the mini-game / mini-program tab before the first-card geometry fallback can click QQ Classic Farm.
+- Added regression assertions for hwnd locking, guarded SendKeys, disabled main-window fallback, disabled chat-list coordinate fallback, and blocked geometry clicks on unconfirmed surfaces.
+
 ## 2026-06-27 - 2.3.2
 
 ### Fixed

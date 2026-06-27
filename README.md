@@ -1,3 +1,4 @@
+<!-- qq-farm-public-readme-header:start -->
 <p align="center">
   <img src="public/assets/proofcore-readme-logo.png" alt="PC PROOFCORE" width="760">
 </p>
@@ -15,17 +16,20 @@
     QQ频道
   </a>
 </p>
-
+<!-- qq-farm-public-readme-header:end -->
 # QQ Farm CDP Manager - Bernadette Edition
 
 QQ Farm CDP Manager is a protected desktop and web control tool for personal study, research, and public-benefit sharing.
 
 This project is permanently free for public-benefit use. Reselling paid copies or paid repackaged versions is not allowed.
 
-Current version: `v2.3.2`
+Current version: `v2.3.3`
 
 ## What Is New
 
+- v2.3.3 locks WeChat SouYiSou recovery to the confirmed `WeChatAppEx` search window handle, so farm keywords are not sent into the WeChat chat window when the search window opens at a different screen position.
+- v2.3.3 disables WeChat main-window search fallback and coordinate-only SouYiSou entry fallback. If the real SouYiSou window cannot be confirmed, the launcher stops safely and lets the recovery retry run instead of clicking recent chats.
+- v2.3.3 blocks dirty SouYiSou result pages such as video/video-account or harvest-reminder searches, and requires a confirmed mini-game/mini-program tab before any first-card geometry click can open QQ Classic Farm.
 - v2.3.2 adds WMPF20001/WMPF20005 Frida address JSON in the runtime config and keeps the embedded adapter fallback for protected/runtime paths where bulk Frida config is intentionally excluded.
 - v2.3.2 hardens the WeChat SouYiSou auto-launch path across window positions and screen layouts: the launcher keeps the search window foreground/top overlay, uses UI Automation to locate the mini-game tab and QQ Classic Farm result, and only falls back to proportional coordinates when UI Automation cannot expose the element.
 - v2.3hotfix adapts WeChat WMPF20005 as the priority runtime and keeps WMPF20001 compatibility. When local Frida address JSON is missing, the WMPF bridge can use embedded 20001/20005 address overrides without modifying `wmpf/frida/`.
