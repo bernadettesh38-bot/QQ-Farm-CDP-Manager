@@ -1,3 +1,21 @@
+<p align="center">
+  <img src="public/assets/proofcore-readme-logo.svg" alt="PC PROOFCORE" width="760">
+</p>
+
+<h1 align="center">QQ农场管理器</h1>
+
+<p align="center">
+  <a href="https://qm.qq.com/q/TgfGjmWHyG">
+    <img src="public/assets/qq-group-icon.svg" alt="" width="18" height="18">
+    QQ群
+  </a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://pd.qq.com/s/5ih5szv66">
+    <img src="public/assets/qq-channel-icon.svg" alt="" width="18" height="18">
+    QQ频道
+  </a>
+</p>
+
 # QQ Farm CDP Manager - Bernadette Edition
 
 QQ Farm CDP Manager is a protected desktop and web control tool for personal study, research, and public-benefit sharing.
