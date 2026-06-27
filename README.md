@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="public/assets/proofcore-readme-logo.svg" alt="PC PROOFCORE" width="760">
+  <img src="public/assets/proofcore-readme-logo.png" alt="PC PROOFCORE" width="760">
 </p>
 
 <h1 align="center">QQ农场管理器</h1>

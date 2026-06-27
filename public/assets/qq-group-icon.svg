@@ -1,8 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="qq-group-icon-title">
   <title id="qq-group-icon-title">QQ group</title>
-  <circle cx="32" cy="32" r="30" fill="#12b7f5"/>
-  <circle cx="24" cy="25" r="8" fill="#ffffff"/>
-  <circle cx="40" cy="25" r="8" fill="#ffffff"/>
-  <path d="M15 47c2.2-8.2 8.6-13 17-13s14.8 4.8 17 13" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round"/>
-  <text x="32" y="31" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#0b5f8c">QQ</text>
+  <ellipse cx="32" cy="57" rx="18" ry="4" fill="#0b1324" opacity="0.18"/>
+  <path d="M15 45c-3 3-6 4-8 2-3-3 1-11 7-17" fill="#1d2636"/>
+  <path d="M49 45c3 3 6 4 8 2 3-3-1-11-7-17" fill="#1d2636"/>
+  <path d="M20 29c-6-10-2-21 12-21s18 11 12 21c5 4 8 10 8 17 0 9-8 13-20 13S12 55 12 46c0-7 3-13 8-17z" fill="#111827"/>
+  <path d="M21 31c-3-7 0-17 11-17s14 10 11 17c5 4 7 9 7 15 0 8-7 11-18 11s-18-3-18-11c0-6 2-11 7-15z" fill="#ffffff"/>
+  <circle cx="25" cy="27" r="4.2" fill="#111827"/>
+  <circle cx="39" cy="27" r="4.2" fill="#111827"/>
+  <circle cx="26.4" cy="25.7" r="1.2" fill="#ffffff"/>
+  <circle cx="40.4" cy="25.7" r="1.2" fill="#ffffff"/>
+  <path d="M28 35c2 2 6 2 8 0" fill="none" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+  <path d="M24 46c-5 1-9 4-10 8" fill="none" stroke="#f59e0b" stroke-width="4" stroke-linecap="round"/>
+  <path d="M40 46c5 1 9 4 10 8" fill="none" stroke="#f59e0b" stroke-width="4" stroke-linecap="round"/>
+  <path d="M22 11c2-6 8-7 10-3-5 0-8 1-10 3z" fill="#111827"/>
 </svg>
