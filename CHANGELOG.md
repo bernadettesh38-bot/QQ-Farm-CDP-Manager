@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-06-29 - 2.5.5
+
+### Fixed
+
+- Restored legacy WeChat CDP compatibility while keeping WMPF20005 as the priority runtime. Older WeChat builds now use the main-window top search route into SouYiSou before following the locked mini-game QQ Classic Farm result flow.
+- Added a persistent WeChat launch mode option for manual or automatic launch recovery, without removing legacy WMPF/Frida address configuration.
+- Improved own-farm land detail recognition so purple land is not mislabeled as gold land in the Web land detail view.
+- Added UTC+8 scheduled warehouse item use for configured tool items. The warehouse flow now switches to the tools tab, handles package-style second `使用` windows, and handles normal or organic fertilizer container confirmation windows before verifying by reopening the warehouse.
+- Rechecked other-place login reconnect handling and kept protected/lite runtime size verification within budget after the warehouse and WeChat changes.
+
 ## 2026-06-29 - 2.3.4
 
 ### Fixed
