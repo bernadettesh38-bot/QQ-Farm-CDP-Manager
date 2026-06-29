@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-06-29 - 2.3.4
+
+### Fixed
+
+- Corrected own-farm purple-land display in the Web land detail view by preferring trusted detail-panel land-type inspection over runtime level fallback.
+- Added a persistent Web log refresh switch so own-farm, friend-farm, and abnormal auto-farm logs can be viewed newest-first or with the old bottom-append behavior.
+- Improved unknown crop hot update during friend stealing. Unknown mature crop components are now recorded even when the crop blacklist is not enabled; blacklist safety still blocks unsafe one-click stealing only when a blacklist is active.
+- Improved friend-steal fallback behavior so a single unchanged target no longer stops the remaining batch, and ordinary one-click steal still follows with targeted land fallback when work remains.
+- Replaced `gameConfig/plant_images/default/400.jpg` with the square PC Proofcore logo artwork.
+
 ## 2026-06-27 - 2.3.3
 
 ### Fixed

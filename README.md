@@ -23,10 +23,14 @@ QQ Farm CDP Manager is a protected desktop and web control tool for personal stu
 
 This project is permanently free for public-benefit use. Reselling paid copies or paid repackaged versions is not allowed.
 
-Current version: `v2.3.3`
+Current version: `v2.3.4`
 
 ## What Is New
 
+- v2.3.4 fixes own-farm purple-land display in the Web land detail view by preferring trusted detail-panel land-type inspection over runtime level fallback.
+- v2.3.4 adds a persistent log refresh switch for the auto-farm logs, allowing newest-first display or the previous bottom-append behavior.
+- v2.3.4 improves unknown crop hot update and friend stealing: new crop components are recorded even without an active blacklist, while blacklist safety still prevents unsafe one-click stealing when a blacklist is enabled.
+- v2.3.4 keeps targeted friend-steal batches moving after a single unchanged target and refreshes the default plant image `400.jpg` with the square PC Proofcore logo.
 - v2.3.3 locks WeChat SouYiSou recovery to the confirmed `WeChatAppEx` search window handle, so farm keywords are not sent into the WeChat chat window when the search window opens at a different screen position.
 - v2.3.3 disables WeChat main-window search fallback and coordinate-only SouYiSou entry fallback. If the real SouYiSou window cannot be confirmed, the launcher stops safely and lets the recovery retry run instead of clicking recent chats.
 - v2.3.3 blocks dirty SouYiSou result pages such as video/video-account or harvest-reminder searches, and requires a confirmed mini-game/mini-program tab before any first-card geometry click can open QQ Classic Farm.
