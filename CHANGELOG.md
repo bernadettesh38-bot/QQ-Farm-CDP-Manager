@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-06-30 - 2.5.5hotfix
+
+### Fixed
+
+- Restored protected legacy WeChat WMPF19201 startup by embedding the 19201 Frida address fallback used by older clients whose protected package no longer includes bulk address JSON files.
+- Fixed warehouse auto-sell settings persistence so the enable switch, interval, and selected categories remain saved after refresh and after saving unrelated warehouse daily item-use settings.
+- Fixed warehouse daily item-use settings persistence so the enable switch, UTC+8 trigger time, and configured item IDs remain saved after refresh and after saving unrelated auto-sell settings.
+- Added a final shop-popup close step after automated warehouse item use for cases where the game jumps from the warehouse flow into a shop confirmation surface.
+- Tightened unknown-crop hot update for friend stealing: newly discovered runtime crops are cached and exposed as blacklist options, then checked against the existing saved blacklist without being auto-added to that blacklist.
+- Fixed blacklist/whitelist detail modal theme variables so the inner modal follows the selected light or dark dashboard theme.
+
 ## 2026-06-29 - 2.5.5
 
 ### Fixed

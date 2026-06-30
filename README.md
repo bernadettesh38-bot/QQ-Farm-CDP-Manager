@@ -23,10 +23,15 @@ QQ Farm CDP Manager is a protected desktop and web control tool for personal stu
 
 This project is permanently free for public-benefit use. Reselling paid copies or paid repackaged versions is not allowed.
 
-Current version: `v2.5.5`
+Current version: `v2.5.5hotfix`
 
 ## What Is New
 
+- v2.5.5hotfix restores protected legacy WeChat WMPF19201 startup by embedding the 19201 Frida address fallback used by older clients.
+- v2.5.5hotfix fixes warehouse auto-sell and daily item-use settings persistence, including the UTC+8 daily trigger time and the enable switches after refresh.
+- v2.5.5hotfix closes a shop popup after automated warehouse item use when the game jumps from the warehouse flow into the shop confirmation surface.
+- v2.5.5hotfix tightens unknown-crop hot update: new runtime crops are cached as blacklist options, then checked against the existing blacklist without being auto-added to the saved blacklist config.
+- v2.5.5hotfix aligns the blacklist/whitelist detail modal with the selected light or dark dashboard theme.
 - v2.5.5 restores legacy WeChat CDP compatibility while keeping WMPF20005 as the priority runtime. Older WeChat builds use the main-window top search route into SouYiSou, then the same locked mini-game result flow.
 - v2.5.5 adds a persistent WeChat launch mode option for manual or automatic launch recovery, and keeps WMPF/Frida legacy address files intact.
 - v2.5.5 improves own-farm land detail recognition for purple land, including the first four purple fields that could be shown as gold land in the Web detail view.
