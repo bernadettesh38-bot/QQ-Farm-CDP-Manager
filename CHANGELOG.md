@@ -1,5 +1,23 @@
 # Changelog
 
+## 2026-07-01 - 2.5.9
+
+### Fixed
+
+- Fixed a WeChat SouYiSou recovery loop where the launcher could keep replacing
+  the already-entered QQ Classic Farm keyword instead of submitting the search.
+- Improved warehouse daily item-use verification so the flow closes leftover
+  shop/reward surfaces, reopens the warehouse for verification, and reports
+  missing target tools explicitly instead of treating them as success.
+- Added a persistent Web setting for Mystery Merchant auto-buy and kept
+  non-diamond Mystery Merchant handling in both full and protected-lite runtime
+  bundles.
+- Fixed Qingmei land-detail image fallback by resolving the runtime crop to the
+  local plant asset candidates.
+- Improved warehouse item image fallback for runtime-only item names so Web
+  warehouse entries avoid the default placeholder whenever a mapped asset can
+  be inferred.
+
 ## 2026-07-01 - 2.5.8
 
 ### Fixed
