@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-07-01 - 2.5.7
+
+### Fixed
+
+- Fixed warehouse daily item-use settings persistence. The enable checkbox, item list, and UTC+8 trigger time now remain saved after refreshing the Web page and after the auto-farm status panel reloads.
+- Improved warehouse item image fallback for fertilizers, gift packages, and golden/super fruit entries by deriving runtime asset candidates and falling back to base item names before showing the default PC placeholder.
+- Fixed warehouse fruit tab classification so ordinary fruit with generic runtime mutation counters, such as mango, stays under the normal fruit tab instead of being moved into the super-mutant fruit tab.
+- Improved friend stealing with crop blacklists and four-tile crops. Safe farms now use one-click stealing first, then run targeted four-tile follow-up where needed; blacklisted or unknown crops still use the safer targeted path.
+- Added regression coverage for daily warehouse item-use persistence, normal-vs-mutant fruit classification, warehouse image URL inference, and four-tile friend-steal fallback behavior.
+
 ## 2026-06-30 - 2.5.5hotfix
 
 ### Fixed
