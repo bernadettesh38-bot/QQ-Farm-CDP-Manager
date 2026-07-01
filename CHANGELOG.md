@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026-07-01 - 2.5.8
+
+### Fixed
+
+- Fixed warehouse daily item-use scheduling so changing the UTC+8 trigger time or item IDs clears stale retry state and the new schedule can run at the configured time.
+- Added a Web warehouse debug action to immediately run configured daily item use without waiting for the clock.
+- Hardened WeChat SouYiSou recovery when the side search window opens but does not accept `QQ经典农场`; the launcher now verifies the search-box text, retries clipboard input, then safely falls back to the top-search route.
+- Fixed land-detail crop images when runtime data only provides a plant id by resolving the plant id back to the local seed/stage image.
+- Improved warehouse tool/item image fallback so fertilizers, organic fertilizers, and gift packages prefer runtime item names before falling back to item ids or the default image.
+- Added opportunistic Mystery Merchant handling in the full runtime: coin/bean/free purchases are confirmed, diamond purchase prompts are skipped, and results are logged in own-farm automation.
+- Fixed auto planting fallback when backpack-first priority seeds are locked or unusable; failed backpack execution now falls through to the configured secondary planting strategy using the remaining empty lands.
+
 ## 2026-07-01 - 2.5.7
 
 ### Fixed
