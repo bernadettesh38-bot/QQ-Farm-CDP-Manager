@@ -1,5 +1,22 @@
 # Changelog
 
+## 2026-07-02 - 2.6
+
+### Fixed
+
+- Reworked Mystery Merchant handling for the live hamster/NPC entry flow. The
+  runtime now opens `MysteryShopNPC`, recognizes the `MysteryShopUI` panel, and
+  handles the merchant before and after own-farm automation phases.
+- Mystery Merchant auto-buy now purchases only coin/gold/golden-bean goods and
+  skips diamond-priced goods so users can decide diamond purchases manually.
+- Mystery Merchant close handling now uses the top-right X / `btn_close`
+  binding and does not use the bottom leave / `请离` action.
+- Kept both full and protected-lite runtime bundles within protected release
+  size limits after the live WMPF20005 verification.
+- Added regression coverage for the observed Mystery Merchant component names,
+  X-only close behavior, diamond skip behavior, and protected runtime size
+  budget.
+
 ## 2026-07-01 - 2.5.9
 
 ### Fixed
