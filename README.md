@@ -23,9 +23,15 @@ QQ Farm CDP Manager is a protected desktop and web control tool for personal stu
 
 This project is permanently free for public-benefit use. Reselling paid copies or paid repackaged versions is not allowed.
 
-Current version: `v2.5.5hotfix`
+Current version: `v2.7`
 
 ## What Is New
+
+- v2.7 adds live WMPF25047 compatibility while retaining WMPF20001 and WMPF20005 runtime paths.
+- v2.7 verifies the Mystery Merchant hamster entry through the real `onBtnBuy` action, skips diamond-priced goods for user choice, and closes only through the top-right X.
+- v2.7 dynamically locks the active SouYiSou window and clicks only an exact `QQ经典农场` UI Automation result. It will not click `经典农场`, `农场时光`, or a guessed result-card coordinate.
+- v2.7 adds no-window WX context rebind and active-client CDP routing, preventing a context probe failure or partial WMPF disconnect from unnecessarily closing a healthy game window.
+- v2.7 fixes the persisted UTC+8 warehouse daily-item schedule reaching the real runtime scheduler; live acceptance verified a timed fertilizer use with an inventory change from 1 to 0.
 
 - v2.5.5hotfix restores protected legacy WeChat WMPF19201 startup by embedding the 19201 Frida address fallback used by older clients.
 - v2.5.5hotfix fixes warehouse auto-sell and daily item-use settings persistence, including the UTC+8 daily trigger time and the enable switches after refresh.

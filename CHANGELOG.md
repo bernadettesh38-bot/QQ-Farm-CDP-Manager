@@ -1,5 +1,18 @@
 # Changelog
 
+## 2026-07-11 - 2.7
+
+### Fixed
+
+- Added WMPF25047 runtime address compatibility while preserving WMPF20001 and WMPF20005 support.
+- Fixed Mystery Merchant automation to invoke the live component purchase method and verify that both the merchant panel and hamster entry disappear before reporting success.
+- Diamond-priced goods are skipped for user choice. The merchant is closed only through the top-right X; the bottom leave action is never used.
+- Locked WeChat SouYiSou launch to the live search-window handle and an exact UI Automation result named `QQ经典农场`. Generic `经典农场`, `农场时光`, lower result cards, and coordinate-only result guesses are no longer clickable.
+- Fixed duplicate WMPF miniapp clients and partial disconnect handling so only the active client answers CDP commands and a surviving connection keeps its execution context.
+- Added in-place WX context rebind. Context recovery no longer closes or relaunches a connected game window, and the Web dashboard exposes a no-window rebind action.
+- Fixed warehouse daily-item scheduling reading a reduced automation config instead of the persisted full user config. A live UTC+8 scheduled run used a real fertilizer item, verified inventory changed from 1 to 0, and closed its temporary UI surfaces.
+- Synchronized source/protected-lite Mystery Merchant behavior and kept the protected runtime size gate green.
+
 ## 2026-07-02 - 2.6
 
 ### Fixed
