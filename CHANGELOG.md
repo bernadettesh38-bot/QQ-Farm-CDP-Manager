@@ -1,5 +1,31 @@
 # Changelog
 
+## 2026-07-11 - 2.8
+
+### Added
+
+- Added daily UTC+8 01:00 Gift Center collection for the expanded WeChat farm
+  layout while preserving the compact farm-window path as a safe no-op.
+- Added Daily Welfare free-card handling. The runtime claims only the exact
+  `每日福利` card when it is marked `免费` and `1/1`, verifies `0/1`, then
+  returns through the RechargeUI top back control.
+- Added a responsive three-day UTC+8 friend leaderboard for confirmed steal
+  and help actions, including friend identity and avatar data when available.
+- Added an opt-in concurrent follow-up mode for multiple four-tile steals.
+  One-click stealing remains first; targeted follow-up is still disabled by
+  default and can be configured independently.
+
+### Fixed
+
+- Gift Center and search-related window actions now discover the exact current
+  WeChat farm HWND and UI Automation bounds for every action. They do not reuse
+  saved coordinates or assume a fixed window position, and they cannot confuse
+  a SouYiSou result window with the farm window.
+- Hardened the Windows PowerShell transport for long UTF-16 UI Automation
+  scripts and fully drains child output before parsing JSON.
+- Improved status-card wrapping so long runtime URLs remain readable on narrow
+  desktop cards and mobile layouts.
+
 ## 2026-07-11 - 2.7
 
 ### Fixed

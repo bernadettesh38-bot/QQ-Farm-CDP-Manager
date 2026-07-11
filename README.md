@@ -23,9 +23,19 @@ QQ Farm CDP Manager is a protected desktop and web control tool for personal stu
 
 This project is permanently free for public-benefit use. Reselling paid copies or paid repackaged versions is not allowed.
 
-Current version: `v2.7`
+Current version: `v2.8`
 
 ## What Is New
+
+- v2.8 adds UTC+8 daily Gift Center collection for the expanded WeChat farm
+  layout and safely preserves the existing compact layout.
+- v2.8 adds Daily Welfare free-card verification (`免费`, `1/1` to `0/1`) and
+  top-back return handling.
+- v2.8 adds a responsive three-day friend steal/help leaderboard and an
+  opt-in concurrent four-tile follow-up switch that never bypasses the first
+  one-click steal.
+- v2.8 dynamically discovers and foreground-locks the current farm window on
+  every action. Search and gift actions never depend on fixed screen positions.
 
 - v2.7 adds live WMPF25047 compatibility while retaining WMPF20001 and WMPF20005 runtime paths.
 - v2.7 verifies the Mystery Merchant hamster entry through the real `onBtnBuy` action, skips diamond-priced goods for user choice, and closes only through the top-right X.
