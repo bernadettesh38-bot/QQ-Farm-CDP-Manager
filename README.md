@@ -23,9 +23,26 @@ QQ Farm CDP Manager is a protected desktop and web control tool for personal stu
 
 This project is permanently free for public-benefit use. Reselling paid copies or paid repackaged versions is not allowed.
 
-Current version: `v2.8`
+Current version: `v2.9`
 
 ## What Is New
+
+- v2.9 adds live-verified WMPF25122 support while preserving the existing
+  legacy WMPF compatibility and exact address tables from 19021 onward.
+- v2.9 separates QQ and WeChat farm-surface recovery. The WeChat route performs
+  one verified bottom-Store redraw and exact dead-land cleanup; QQ continues to
+  use its established one-click farm route.
+- v2.9 hardens normal help, Guard Dog help, own-farm return, planting strategy
+  identity, fertilizer phase policy, Warehouse daily item use, mailbox daily
+  completion, and Mystery Merchant currency handling.
+- v2.9 adds daily Football Carnival purchases at 00:10 UTC+8 through July 20
+  and automatically disables the event option on July 21.
+- v2.9 makes WeChat manual launch persistent and pointer-safe, fixes exact
+  `QQ Classic Farm` result selection on scaled displays, and prevents QQ/WX
+  miniapp recovery from restarting the local 8787 service.
+- v2.9 keeps the multiple four-tile follow-up implementation behind its opt-in
+  setting. Automated coverage passes; fresh live concurrent mature targets are
+  reserved for the next release acceptance cycle.
 
 - v2.8 adds UTC+8 daily Gift Center collection for the expanded WeChat farm
   layout and safely preserves the existing compact layout.

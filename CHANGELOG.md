@@ -1,5 +1,28 @@
 # Changelog
 
+## 2026-07-15 - 2.9
+
+### Added
+
+- Added support for current and legacy WeChat miniapp runtimes, including the
+  latest tested WMPF build.
+- Added persistent automatic/manual WeChat launch selection.
+- Added daily Football Carnival purchases at 00:10 UTC+8 through July 20; the
+  option turns itself off on July 21.
+
+### Fixed
+
+- Improved QQ and WeChat startup, reconnection, window recovery, and farm-page
+  rendering without restarting the local control service.
+- Improved own-farm harvesting, planting, fertilizing, dead-land cleanup, and
+  multi-tile crop handling.
+- Improved friend stealing, normal help, Guard Dog help, and reliable return to
+  the home farm.
+- Improved Warehouse tools, daily rewards, mailbox, and Mystery Merchant flows
+  so temporary pages are closed after verified completion.
+- Improved protected-package compatibility, diagnostics, integrity checks, and
+  long-running performance.
+
 ## 2026-07-11 - 2.8
 
 ### Added
