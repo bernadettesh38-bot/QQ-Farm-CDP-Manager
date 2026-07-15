@@ -1,5 +1,18 @@
 # Changelog
 
+## 2026-07-15 - 2.9.1
+
+### Fixed
+
+- Improved friend stealing when only a small amount remains or the farm is
+  affected by current activity visuals.
+- Improved multi-land steal follow-up speed while preserving crop blacklist
+  safety.
+- Improved large Guard Dog scans so progress is saved, recovery is safer, and
+  long friend lists complete faster without blocking the local service.
+- Rechecked QQ, WeChat, Web control, diagnostics, and protected-package
+  compatibility.
+
 ## 2026-07-15 - 2.9
 
 ### Added

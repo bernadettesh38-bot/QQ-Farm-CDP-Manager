@@ -23,9 +23,16 @@ QQ Farm CDP Manager is a protected desktop and web control tool for personal stu
 
 This project is permanently free for public-benefit use. Reselling paid copies or paid repackaged versions is not allowed.
 
-Current version: `v2.9`
+Current version: `v2.9.1`
 
 ## What Is New
+
+- v2.9.1 improves friend stealing for residual crops and current activity
+  visuals, with faster safe follow-up across multiple known lands.
+- v2.9.1 makes large Guard Dog scans faster, checkpointed, and recoverable while
+  keeping the local service and scheduler lifecycle stable.
+- v2.9.1 includes refreshed QQ, WeChat, Web control, diagnostics, and protected
+  release verification.
 
 - v2.9 adds live-verified WMPF25122 support while preserving the existing
   legacy WMPF compatibility and exact address tables from 19021 onward.
