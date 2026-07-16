@@ -23,9 +23,18 @@ QQ Farm CDP Manager is a protected desktop and web control tool for personal stu
 
 This project is permanently free for public-benefit use. Reselling paid copies or paid repackaged versions is not allowed.
 
-Current version: `v2.9.1`
+Current version: `v2.9.2`
 
 ## What Is New
+
+- v2.9.2 adds isolated simultaneous operation for two QQ farms and one WeChat
+  farm, including independent runtime routing, account state, and daily tasks.
+- v2.9.2 improves current WeChat runtime discovery and cold-start context
+  recovery while retaining legacy WMPF compatibility.
+- v2.9.2 hardens long-running memory, diagnostics, LAN control, reconnect, and
+  scheduled-recovery behavior without removing farm automation features.
+- v2.9.2 refreshes source/protected verification for normal Windows startup,
+  signed-package integrity, runtime contracts, and performance safeguards.
 
 - v2.9.1 improves friend stealing for residual crops and current activity
   visuals, with faster safe follow-up across multiple known lands.

@@ -1,5 +1,24 @@
 # Changelog
 
+## 2026-07-15 - 2.9.2
+
+### Added
+
+- Added isolated simultaneous runtime support for two QQ farms and one WeChat
+  farm, with independent account state and daily action routing.
+
+### Fixed
+
+- Improved current and legacy WeChat runtime discovery and context recovery.
+- Rechecked friend stealing, normal help, and Guard Dog behavior across isolated
+  QQ and WeChat farm instances.
+- Improved multi-account scheduled recovery so one QQ account cannot replace or
+  disconnect another account during a maintenance cycle.
+- Hardened LAN authorization, WebSocket backpressure, diagnostics, logs, and
+  long-running persistence queues.
+- Rechecked normal Windows startup, protected-package compatibility, signed
+  integrity, runtime contracts, and performance safeguards.
+
 ## 2026-07-15 - 2.9.1
 
 ### Fixed
