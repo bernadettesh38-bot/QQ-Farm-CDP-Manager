@@ -1,5 +1,13 @@
 # AI Agent Policy
 
+## Delivery Discipline
+
+All user-visible changes follow `docs/PRODUCT_DELIVERY_LOOP.md`: capture the
+request and acceptance evidence, define the workflow, make scoped changes,
+test source and protected behavior, then publish only after the live acceptance
+path passes. Update `docs/CURRENT_TASK_STATE.md` before context loss, long
+verification, or release work.
+
 ## Public Benefit Product
 
 This project is a **PUBLIC BENEFIT PRODUCT**. It is permanently free to use

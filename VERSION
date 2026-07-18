@@ -1,14 +1,14 @@
 {
   "product": "QQ-Farm-CDP-Manager",
   "artifactType": "protected",
-  "version": "2.9.2",
-  "buildId": "PUBLIC-20260716-001",
-  "sourceCommit": "d692fc38cf3bf141eae249a34ff567c221d87235",
-  "createdAt": "2026-07-16T04:52:53.241Z",
+  "version": "2.9.3",
+  "buildId": "PUBLIC-20260718-001",
+  "sourceCommit": "db483c92c10cdf5b7f6bbb3af2262e7534234417",
+  "createdAt": "2026-07-18T06:10:36.965Z",
   "releaseCadence": {
     "mode": "emergency",
-    "emergencyType": "security",
-    "emergencyReason": "Multi-account isolation, security, and OOM hardening",
+    "emergencyType": "compatibility",
+    "emergencyReason": "Warehouse lifecycle, multi-tile action targeting, and runtime profile compatibility repair",
     "issuePoolFile": "docs/ISSUE_POOL.md",
     "requiredIssueCount": 10,
     "qualifiedIssueIds": []

@@ -1,5 +1,23 @@
 # Changelog
 
+## 2026-07-18 - 2.9.3
+
+### Added
+
+- Added optional account-specific settings selection for multi-account farms.
+- Added a documented product delivery loop covering requirements, design,
+  implementation, verification, release, rollback, and post-release review.
+
+### Fixed
+
+- Improved Warehouse refresh, selling, daily item use, and close recovery so
+  unrelated farm actions wait until the Warehouse transaction is complete.
+- Improved multi-tile crop action targeting and concurrent harvest/steal
+  handling.
+- Simplified fertilizer strategies while preserving existing saved settings.
+- Improved Web theme persistence, configuration profiles, desktop controls,
+  runtime diagnostics, and source/protected behavior consistency.
+
 ## 2026-07-15 - 2.9.2
 
 ### Added
