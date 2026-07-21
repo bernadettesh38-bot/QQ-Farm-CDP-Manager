@@ -1,5 +1,25 @@
 # Changelog
 
+## 2026-07-22 - 2.9.4
+
+### Added
+
+- Added clearer QQ and WeChat multi-account selection in desktop settings.
+- Added exact WMPF20079 address-profile support and a validated exact-profile
+  resolver for future WeChat runtime updates.
+
+### Fixed
+
+- Improved Warehouse item use, transaction priority, completion verification,
+  and recovery to a fully rendered home farm after closing Warehouse surfaces.
+- Fixed false-success states in immediate daily-action controls.
+- Improved own-farm batch harvesting and retained safe residual friend-steal
+  follow-up behavior.
+- Improved desktop control click verification and source/protected consistency.
+- Automated the native QQ account chooser for additional QQ farm accounts.
+- Verified protected QQ and WeChat startup, multi-account Warehouse actions,
+  theme persistence, scheduler actions, integrity, diagnostics, and health.
+
 ## 2026-07-18 - 2.9.3
 
 ### Added
