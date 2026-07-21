@@ -23,9 +23,17 @@ QQ Farm CDP Manager is a protected desktop and web control tool for personal stu
 
 This project is permanently free for public-benefit use. Reselling paid copies or paid repackaged versions is not allowed.
 
-Current version: `v2.9.4`
+Current version: `v2.9.5`
 
 ## What Is New
+
+- v2.9.5 can locally derive and runtime-verify WMPF hook information when a
+  trusted exact profile is unavailable; unsafe or ambiguous results are not
+  injected.
+- v2.9.5 supports explicit plans up to three QQ farms plus one WeChat farm and
+  adds an account-card picker for account-specific Web settings.
+- v2.9.5 automatically removes the expired Football Carnival controls from the
+  Web page while preserving safe compatibility responses.
 
 - v2.9.4 improves Warehouse item use, completion verification, and reliable
   return to a fully rendered home farm.

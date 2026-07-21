@@ -51,6 +51,17 @@ Runtime status and diagnostics in official protected packages should keep
 stable, ASCII-safe field names and reason codes so users can verify service
 state without exposing private account data or private source code.
 
+Unknown WMPF compatibility must never be implemented by copying offsets from a
+neighboring build. Local adaptation may derive semantic PE anchors and runtime
+function boundaries, but it must verify the scene chain against a real runtime
+event and bind cached results to the exact `flue.dll` SHA-256. Missing or
+ambiguous evidence must leave the service alive and the runtime waiting.
+
+Multi-account configuration supports at most three QQ runtimes and one WX
+runtime. Invalid combinations must be rejected explicitly. Account-specific
+settings must preserve profile isolation and show a visual identity choice only
+when multiple connected accounts are available.
+
 Official maintenance must preserve v1.9.7 diagnostics for QQ restart-source
 tracking, QQ manual-host fallback suppression, normal friend-help configured
 limit recalculation, candidate/dispatch/action proof, and own-farm

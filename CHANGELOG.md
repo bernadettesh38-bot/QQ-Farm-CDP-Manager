@@ -1,5 +1,27 @@
 # Changelog
 
+## 2026-07-22 - 2.9.5
+
+### Added
+
+- Added verified local WMPF adaptation when an exact address profile is not
+  available, with semantic PE discovery, a real runtime scene probe, and a
+  DLL-hash-bound cache.
+- Added explicit multi-account plans for up to three QQ farms plus one WeChat
+  farm and a visual account picker for account-specific Web settings.
+
+### Fixed
+
+- Single-account desktop settings now open directly, while multi-account
+  settings show account identity, nickname, level, platform, and avatar or a
+  generated fallback.
+- Expired Football Carnival controls now auto-disable and disappear from the
+  Web page after the event cutoff without affecting compatible backend calls.
+- Verified WMPF25122 can rebuild its profile locally with all exact 25122
+  sources bypassed, then restore the real CDP context and scheduler.
+- Verified the same WMPF, multi-account settings, expiry, integrity, and runtime
+  contracts in both source and protected-package release paths.
+
 ## 2026-07-22 - 2.9.4
 
 ### Added
