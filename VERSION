@@ -1,14 +1,14 @@
 {
   "product": "QQ-Farm-CDP-Manager",
   "artifactType": "protected",
-  "version": "2.9.5",
-  "buildId": "PUBLIC-20260722-005",
-  "sourceCommit": "49dfbb2331c1d5f431c8b2dfe7c2ce8a85ee0daf",
-  "createdAt": "2026-07-21T22:44:10.553Z",
+  "version": "2.9.6",
+  "buildId": "PUBLIC-20260722-007",
+  "sourceCommit": "ab5c0610352da30301b7631717ed7a3fe14b5040",
+  "createdAt": "2026-07-22T02:45:28.023Z",
   "releaseCadence": {
     "mode": "emergency",
     "emergencyType": "compatibility",
-    "emergencyReason": "Verified local adaptation for unknown WMPF builds and multi-account settings correction",
+    "emergencyReason": "Fix CDP friend-list truncation so leaderboard and Guard Dog scan preserve the runtime-detected count",
     "issuePoolFile": "docs/ISSUE_POOL.md",
     "requiredIssueCount": 10,
     "qualifiedIssueIds": []

@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-07-22 - 2.9.6
+
+### Fixed
+
+- Fixed the CDP friend-list transport truncating live friend leaderboards and
+  Guard Dog scan input to 256 entries.
+- Friend lists now preserve the runtime-detected friend count dynamically while
+  unrelated large RPC arrays retain the existing safety cap.
+- Added source and protected-package regression coverage for friend counts
+  above 256 and verified the live Guard Dog scan receives the complete list.
+
 ## 2026-07-22 - 2.9.5
 
 ### Added

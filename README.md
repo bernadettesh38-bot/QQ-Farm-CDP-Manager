@@ -23,9 +23,14 @@ QQ Farm CDP Manager is a protected desktop and web control tool for personal stu
 
 This project is permanently free for public-benefit use. Reselling paid copies or paid repackaged versions is not allowed.
 
-Current version: `v2.9.5`
+Current version: `v2.9.6`
 
 ## What Is New
+
+- v2.9.6 preserves the complete runtime-detected friend leaderboard and Guard
+  Dog scan list instead of truncating it to 256 entries.
+- The change is limited to friend-list transport; unrelated RPC safety limits
+  and other farm automation behavior remain unchanged.
 
 - v2.9.5 can locally derive and runtime-verify WMPF hook information when a
   trusted exact profile is unavailable; unsafe or ambiguous results are not

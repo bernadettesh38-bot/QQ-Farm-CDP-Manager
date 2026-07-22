@@ -111,6 +111,9 @@ Mature friend-status events must be able to create temporary burst patrol
 candidates even when the current friend-list cache missed the gid. The Guard
 Dog auto-import setting must be persistent and user-facing; when disabled,
 Guard Dog scans must not mutate friend whitelist rules.
+Friend leaderboard and Guard Dog scan input must preserve every friend returned
+by the runtime. Generic RPC array limits must not truncate `gameCtl.getFriendList`
+to 256 or any other fixed friend count.
 
 Official maintenance for v2.3hotfix and later must keep WMPF20005 as the
 priority WeChat runtime target while preserving WMPF20001 compatibility.
