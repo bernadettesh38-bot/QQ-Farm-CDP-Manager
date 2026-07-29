@@ -3,7 +3,7 @@
   <img src="public/assets/proofcore-readme-logo.png" alt="PC PROOFCORE" width="760">
 </p>
 
-<h1 align="center">QQ农场管理器</h1>
+<h1 align="center">等待重构</h1>
 
 <p align="center">
   <a href="https://qm.qq.com/q/TgfGjmWHyG">
